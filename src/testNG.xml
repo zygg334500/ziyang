@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <listeners name="失败自动截图">       
+        
+              <listener class-name="Listener_retry.RetryListener" />
+    </listeners>
+
+    <test name="活动流程测试">
+        <classes>
+            <class name="Activity.Publish_ActivitywithallStep" />
+            <class name="Activity.To_joinActivity" />    
+            <class name="Activity.Advice_to_activity" />
+        </classes>
+        </test>
+        
+   <test name="备课流程测试">
+    <classes>
+      <class name="Backup_Course.publish_bcourse"/>
+      <class name="Backup_Course.Join_bCourse"/>
+      <class name="Backup_Course.making"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="文章交流测试">
+    <classes> 
+      <class name="Documentation_and_exchange.SentDoc"/>
+      <class name="Documentation_and_exchange.Sent_Exchange"/>
+      <class name="Documentation_and_exchange.take_comments"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test name="磨课流程测试">
+    <classes>
+      <class name="Mo_course.Publish_moke"/>
+      <class name="Mo_course.join_moke"/>
+      <class name="Mo_course.Check_data"/>
+    </classes>
+  </test> <!-- Test -->
+  
+      <test name="作业流程测试">
+        <classes>
+            <class name="task.Publish_Task" />
+            <class name="task.Submit_Task" />    
+            <class name="task.Making" />
+        </classes>
+    </test>
+</suite>
+
+
+

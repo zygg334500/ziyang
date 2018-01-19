@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="classes" thread-count="6">
+  <test name="Test">
+    <classes>
+                 <class name="tongjichaxun.Banjitongji"/>
+                 <class name="tongjichaxun.Fenleitongji"/>
+                  <class name="tongjichaxun.Fudaolaoshi"/>
+                        <class name="tongjichaxun.Guanliyuan"/>
+                              <class name="tongjichaxun.Xuanyuan"/>
+                              <class name="tongjichaxun.Zhuanjia"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

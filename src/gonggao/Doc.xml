@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes> 
+      <class name="gonggao.Fabugonggao"/>
+      <class name="gonggao.Gejigonggao"/>
+      <class name="gonggao.Qanbugonggao"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

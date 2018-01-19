@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+      <class name="Backup_Course.publish_bcourse"/>
+      <class name="Backup_Course.Join_bCourse"/>
+      <class name="Backup_Course.making"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

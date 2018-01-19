@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="classes" thread-count="1">
+  <test name="Test">
+    <classes>
+      <class name="AllexitActivity.Jitibeike_guanliyuan"/>
+      <class name="AllexitActivity.Jitibeike_teacher"/>
+      <class name="AllexitActivity.Jitibeike_zhuanjia"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

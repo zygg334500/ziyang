@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+                  <class name="Activity.Publish_ActivitywithallStep" />
+            <class name="Activity.To_joinActivity" />    
+            <class name="Activity.Advice_to_activity" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

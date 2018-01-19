@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="Listener_retry.RetryListener"/>
+  </listeners>
+  <test name="活动流程测试(failed)">
+    <classes>
+      <class name="Activity.Advice_to_activity">
+        <methods>
+          <include name="advice_to_activity"/>
+        </methods>
+      </class> <!-- Activity.Advice_to_activity -->
+    </classes>
+  </test> <!-- 活动流程测试(failed) -->
+  <test name="磨课流程测试(failed)">
+    <classes>
+      <class name="Mo_course.Check_data">
+        <methods>
+          <include name="check_data"/>
+        </methods>
+      </class> <!-- Mo_course.Check_data -->
+    </classes>
+  </test> <!-- 磨课流程测试(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

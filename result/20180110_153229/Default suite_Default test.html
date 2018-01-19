@@ -1,0 +1,700 @@
+<html xmlns:math="http://exslt.org/math" xmlns:testng="http://testng.org">
+   <head>
+      <title>TestNG Results</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+      <meta http-equiv="pragma" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="max-age=0"></meta>
+      <meta http-equiv="cache-control" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="no-store"></meta>
+      <LINK rel="stylesheet" href="style.css"></LINK>
+      <script type="text/javascript" src="main.js"></script>
+   </head>
+   <body>
+      <table width="100%" style="font-size: 16px; margin-bottom: 10px;" cellspacing="1">
+         <tr>
+            <td width="100%">
+               Test case
+               
+               <b>Default test</b>
+            </td>
+            <td style="background-color: #FFBBBB; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">3</div>
+            </td>
+            <td style="background-color: lightgreen; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">0</div>
+            </td>
+            <td style="background-color: #FFFFBB; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">0</div>
+            </td>
+            <td align="center" style="background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">3</div>
+            </td>
+            <td align="center"
+                style="font-weight: bold; background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">0%</div>
+            </td>
+            <td style="background-color: #eaf0f7; padding: 3px 3px 3px 0;" align="center"
+                nowrap="true">2m
+               17s
+               
+            </td>
+         </tr>
+      </table>
+      <div style="width: 200px;">
+         <label for="groupMethodsCheckBox" style="font-weight: bold; margin: 0;">
+            <input id="groupMethodsCheckBox" type="checkbox" onclick="switchTestMethodsView(this)"
+                   checked=""></input>
+            Group by class
+            
+         </label>
+         <br></br>
+         <label for="methodsFilter_ALL" style="font-weight: bold; margin: 0;">
+            <input id="methodsFilter_ALL" type="checkbox"
+                   onclick="testMethodsFilterChanged(this, 'ALL')"
+                   checked=""></input>
+            All
+            
+         </label>
+      </div>
+      <label for="methodsFilter_FAIL" style="margin-left: 20px;">
+         <input id="methodsFilter_FAIL" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'FAIL')"
+                checked=""></input>
+         Failed
+         
+      </label>
+      <label for="methodsFilter_PASS">
+         <input id="methodsFilter_PASS" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'PASS')"
+                checked=""></input>
+         Passed
+         
+      </label>
+      <label for="methodsFilter_SKIP">
+         <input id="methodsFilter_SKIP" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'SKIP')"
+                checked=""></input>
+         Skipped
+         
+      </label>
+      <label for="methodsFilter_CONF">
+         <input id="methodsFilter_CONF" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'CONF')"
+                checked=""></input>
+         Config
+         
+      </label>
+      <br></br>
+      <div id="testMethodsByStatus" style="display: none;">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL1_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL1_details')">raimn(devguanliyuan
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:17:24</td>
+               <td nowrap="true" align="right">53s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL1_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devguanliyuan
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:17:24
+                     </div>
+                     <div>
+                        <b>End time: </b>15:18:18
+                     </div>
+                     <div>
+                        <b>Duration: </b>53s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL1_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:153)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL2_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL2_details')">raimn(devzhuanjia
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:18:18</td>
+               <td nowrap="true" align="right">51s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL2_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devzhuanjia
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:18:18
+                     </div>
+                     <div>
+                        <b>End time: </b>15:19:09
+                     </div>
+                     <div>
+                        <b>Duration: </b>51s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL2_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:153)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL3_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL3_details')">raimn(devteacher
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:19:09</td>
+               <td nowrap="true" align="right">32s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL3_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devteacher
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:19:09
+                     </div>
+                     <div>
+                        <b>End time: </b>15:19:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>32s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byStatus_failed_FAIL3_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:102)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div id="testMethodsByClass">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">HomePage.EveryRole_HomePage</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL1_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL1_details')">raimn(devguanliyuan
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:17:24</td>
+               <td nowrap="true" align="right">53s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL1_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devguanliyuan
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:17:24
+                     </div>
+                     <div>
+                        <b>End time: </b>15:18:18
+                     </div>
+                     <div>
+                        <b>Duration: </b>53s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL1_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:153)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL2_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL2_details')">raimn(devzhuanjia
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:18:18</td>
+               <td nowrap="true" align="right">51s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL2_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devzhuanjia
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:18:18
+                     </div>
+                     <div>
+                        <b>End time: </b>15:19:09
+                     </div>
+                     <div>
+                        <b>Duration: </b>51s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL2_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:153)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL3_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL3_details')">raimn(devteacher
+                     
+                     ,
+                     
+                     3edc$RFV)
+                  </a>
+               </td>
+               <td nowrap="true">15:19:09</td>
+               <td nowrap="true" align="right">32s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('HomePage.EveryRole_HomePage_raimn_byClass_FAIL3_exception')">java.lang.AssertionError: 
+                     expected [false] but found [true]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>raimn
+                     </div>
+                     <div>
+                        <b>Signature: </b>raimn(java.lang.String, java.lang.String)[pri:0, instance:HomePage.EveryRole_HomePage@c540c0]
+                     </div>
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        devteacher
+                        
+                        ,
+                        
+                        3edc$RFV
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:19:09
+                     </div>
+                     <div>
+                        <b>End time: </b>15:19:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>32s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="HomePage.EveryRole_HomePage_raimn_byClass_FAIL3_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: expected [false] but found [true]
+                        	at org.testng.Assert.fail(Assert.java:94)
+                        	at org.testng.Assert.failNotEquals(Assert.java:496)
+                        	at org.testng.Assert.assertEquals(Assert.java:125)
+                        	at org.testng.Assert.assertEquals(Assert.java:288)
+                        	at org.testng.Assert.assertEquals(Assert.java:298)
+                        	at HomePage.EveryRole_HomePage.raimn(EveryRole_HomePage.java:102)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                        	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.lang.reflect.Method.invoke(Method.java:601)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+                        	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+                        	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+                        	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+                        	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+                        	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+                        	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+                        	at org.testng.TestNG.run(TestNG.java:1048)
+                        	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+                        	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+                        	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <br></br>
+      </div>
+      <div style="margin-top: 15px; color: gray; text-align: center; font-size: 9px;">
+         Generated with
+         
+         <a href="http://code.google.com/p/testng-xslt/" style="color: #8888aa;"
+            target="_blank">
+            TestNG XSLT
+            
+         </a>
+      </div>
+   </body>
+</html>

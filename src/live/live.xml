@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="pushLive" thread-count="3">
+    <classes>
+      <class name="live.AilipayLive"/>
+      <class name="live.FreeLive"/>
+      <class name="live.WeCatPayLive"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="join" thread-count="1">
+    <classes>
+      <class name="live.JoinLive"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

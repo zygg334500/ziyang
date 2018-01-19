@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes> 
+      <class name="Documentation_and_exchange.SentDoc"/>
+      <class name="Documentation_and_exchange.Sent_Exchange"/>
+      <class name="Documentation_and_exchange.take_comments"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

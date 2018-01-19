@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+      <class name="Mo_course.Publish_moke"/>
+      <class name="Mo_course.join_moke"/>
+      <class name="Mo_course.Check_data"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
