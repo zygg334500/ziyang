@@ -46,6 +46,7 @@ public class Publish_moke implements TestInfo{
 		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
 		driver.findElement(By.linkText("发布")).click();
 	    System.out.println("磨课发布成功");
+	    
 	    driver.quit();
   }
 

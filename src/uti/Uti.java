@@ -18,6 +18,7 @@ public class Uti {
 	public static void ChromeBrowser_setup(WebDriver driver,String username,String password){
 		System.setProperty("webdriver.chrome.driver", "/Program Files (x86)/Google/Chrome/Application/WebDriver.exe");
 	    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
 	    
 	    //driver.get("http://cas.dev.teacheredu.cn/auth/login?service=http%3A%2F%2Fcas.dev.teacheredu.cn%2Fuc%2Findex.htm&renew=true&share=share&isGate=false");
 	    driver.get("http://cas.dev.teacheredu.cn/auth/login?service=http%3A%2F%2Fcas.dev.teacheredu.cn%2Fuc%2Findex&renew=true&share=share&isGate=false");
