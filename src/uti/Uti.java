@@ -19,6 +19,7 @@ public class Uti {
 		
 		System.setProperty("webdriver.chrome.driver", "C:/Users/gg/AppData/Local/Google/Chrome/Application/chromedriver.exe");
 	    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
 	    
 	    //driver.get("http://cas.dev.teacheredu.cn/auth/login?service=http%3A%2F%2Fcas.dev.teacheredu.cn%2Fuc%2Findex.htm&renew=true&share=share&isGate=false");
 	    driver.get("http://cas.dev.teacheredu.cn/auth/login?service=http%3A%2F%2Fcas.dev.teacheredu.cn%2Fuc%2Findex&renew=true&share=share&isGate=false");
