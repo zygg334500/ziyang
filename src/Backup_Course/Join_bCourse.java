@@ -15,18 +15,18 @@ public class Join_bCourse  implements TestInfo{
 		
 		Uti.ChromeBrowser_setup(driver, "1.44105915053E12", "123123");
 		
-		driver.findElement(By.partialLinkText("±¸¿Î")).click();
+		driver.findElement(By.partialLinkText("å¤‡è¯¾")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//a[contains(text(),'×¨¼Ò·¢²¼µÄ±¸¿Î1')])[1]")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'ä¸“å®¶å‘å¸ƒçš„å¤‡è¯¾1')])[1]")).click();
 		
 		driver.switchTo().frame(1);
-		driver.findElement(By.className("ke-content")).sendKeys("±¸¿ÎµÄÄÚÈİÎÒÈ¥¶öÎ¢ÈíÎÒÇ×¶úÎÒÇ×¶úÈ®ÎÁÈÈÇëÎÊrewrite");
+		driver.findElement(By.className("ke-content")).sendKeys("å¤‡è¯¾çš„å†…å®¹æˆ‘å»é¥¿å¾®è½¯æˆ‘äº²è€³æˆ‘äº²è€³çŠ¬ç˜Ÿçƒ­è¯·é—®rewrite");
 		driver.switchTo().defaultContent();
 		
 		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
-		driver.findElement(By.linkText("·¢²¼")).click();
+		driver.findElement(By.linkText("å‘å¸ƒ")).click();
 
-	    System.out.println("±¸¿Î²Î¼Ó³É¹¦");
+	    System.out.println("å¤‡è¯¾å‚åŠ æˆåŠŸ");
 	    driver.quit();
 	  
   }

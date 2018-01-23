@@ -16,35 +16,35 @@ private static final ChromeDriver driver=new ChromeDriver();
 		
 		Uti.ChromeBrowser_setup(driver, "suke", "123123");
 		
-		driver.findElement(By.partialLinkText("±¸¿Î")).click();
-		driver.findElement(By.xpath("(//a[contains(text(),'²é¿´ÏêÇé')])[1]")).click();
+		driver.findElement(By.partialLinkText("å¤‡è¯¾")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'æŸ¥çœ‹è¯¦æƒ…')])[1]")).click();
 		
-		driver.findElement(By.linkText("Î´ÅúÔÄ")).click();
+		driver.findElement(By.linkText("æœªæ‰¹é˜…")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("Î´ÅúÔÄ")).click();
+		driver.findElement(By.linkText("æœªæ‰¹é˜…")).click();
 		try {
-			driver.findElement(By.linkText("ÅúÔÄ")).click();
+			driver.findElement(By.linkText("æ‰¹é˜…")).click();
 			
 		} catch (Exception e) {
-			driver.findElement(By.linkText("ÅúÔÄ")).click();
+			driver.findElement(By.linkText("æ‰¹é˜…")).click();
 			// TODO: handle exception
 		}
 		
 	    driver.findElement(By.xpath("(//input[contains(@value,'good')])")).click();
-	    driver.findElement(By.name("remark")).sendKeys("±¸¿ÎĞ´µÄ²»´í£¬ÍÆ¼ö´ó¼ÒÔÄ¶Á");
+	    driver.findElement(By.name("remark")).sendKeys("å¤‡è¯¾å†™çš„ä¸é”™ï¼Œæ¨èå¤§å®¶é˜…è¯»");
 	    driver.findElement(By.name("isRecommend")).click();
-	    driver.findElement(By.linkText("·¢²¼")).click();
+	    driver.findElement(By.linkText("å‘å¸ƒ")).click();
 
 	  try {
 		while(true){
-			driver.findElement(By.linkText("·µ»Ø")).click();
+			driver.findElement(By.linkText("è¿”å›")).click();
 			break;
 		}
 	} catch (Exception e) {
 	     Uti.waitForAlertAndCloseAlert(driver);
 		// TODO: handle exception
 	}
-	    System.out.println("±¸¿ÎÅúÔÄ³É¹¦");
+	    System.out.println("å¤‡è¯¾æ‰¹é˜…æˆåŠŸ");
 	    driver.quit();
   }
 

@@ -14,25 +14,25 @@ public class join_moke implements TestInfo{
   public void addtomoke() throws Exception {
 		Uti.ChromeBrowser_setup(driver, "1.44105915053E12", "123123");
 		
-		driver.findElement(By.partialLinkText("Ä¥¿Î")).click();
+		driver.findElement(By.partialLinkText("ç£¨è¯¾")).click();
 		driver.findElement(By.id("tab4")).click();		
-		driver.findElement(By.xpath("//a[@title='Ä§¿ËÖí1']")).click();
+		driver.findElement(By.xpath("//a[@title='é­”å…‹çŒª1']")).click();
 		
 		String a= driver.findElement(By.className("cymk_xx")).getText();
 		String time = Uti.get_currenttime1();
 		System.out.println(time);
-		System.out.println("\""+"·¢ÆğÈË£º²ã¼¶×¨¼Ò ÀîÔ¶Óñ ½ØÖ¹Ê±¼ä£º"+time+"\"");
+		System.out.println("\""+"å‘èµ·äººï¼šå±‚çº§ä¸“å®¶ æè¿œç‰ æˆªæ­¢æ—¶é—´ï¼š"+time+"\"");
 		if(a.indexOf(time)!=-1){
-	    	driver.findElement(By.linkText("²ÎÓëÄ¥¿Î")).click();
+	    	driver.findElement(By.linkText("å‚ä¸ç£¨è¯¾")).click();
 	    	driver.switchTo().frame(0);
 	    	driver.findElement(By.className("ke-content")).sendKeys("12345678");
 	    	driver.switchTo().defaultContent();
-	    	driver.findElement(By.linkText("·¢²¼")).click(); 		    
+	    	driver.findElement(By.linkText("å‘å¸ƒ")).click(); 		    
 	    }else{
-	    driver.findElement(By.linkText("·µ»Ø")).click();
-	    System.out.println("²»ÊÇÏë²ÎÓëµÄÄ¥¿Î");
+	    driver.findElement(By.linkText("è¿”å›")).click();
+	    System.out.println("ä¸æ˜¯æƒ³å‚ä¸çš„ç£¨è¯¾");
 	    }
-	    System.out.println("Ä¥¿Î²Î¼Ó³É¹¦");
+	    System.out.println("ç£¨è¯¾å‚åŠ æˆåŠŸ");
 	    driver.quit();
   }
 

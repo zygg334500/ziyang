@@ -17,40 +17,40 @@ public class Check_data implements TestInfo{
 		
 		Uti.ChromeBrowser_setup(driver, "suke", "123123");
 		
-		driver.findElement(By.partialLinkText("Ä¥¿Î")).click();
+		driver.findElement(By.partialLinkText("ç£¨è¯¾")).click();
 		driver.findElement(By.id("tab1")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("(//a[contains(text(),'²é¿´×ã¼£')])[1]")).click();
-		driver.findElement(By.xpath("(//a[contains(text(),'²é¿´ÏêÏ¸')])[1]")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'æŸ¥çœ‹è¶³è¿¹')])[1]")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'æŸ¥çœ‹è¯¦ç»†')])[1]")).click();
 		
 		driver.findElement(By.id("kindStyle_0")).click();
 		WebElement context1= driver.findElement(By.id("content_content1"));//content_content2
-		Assert.assertEquals("Ñ§Ï°Ä¿±êÄÚÈİ", context1.getText());
+		Assert.assertEquals("å­¦ä¹ ç›®æ ‡å†…å®¹", context1.getText());
         driver.findElement(By.id("kindStyle_1")).click();
 		WebElement context2= driver.findElement(By.id("content_content2"));
-		Assert.assertEquals("½ÌÑ§Ä¿±êÄÚÈİ", context2.getText());
+		Assert.assertEquals("æ•™å­¦ç›®æ ‡å†…å®¹", context2.getText());
 		driver.findElement(By.id("kindStyle_2")).click();
 		WebElement context3= driver.findElement(By.id("content_content3"));
-		Assert.assertEquals("½ÌÑ§·½·¨ÄÚÈİ", context3.getText());
+		Assert.assertEquals("æ•™å­¦æ–¹æ³•å†…å®¹", context3.getText());
 		driver.findElement(By.id("kindStyle_3")).click();
 		WebElement context4= driver.findElement(By.id("content_content4"));
-		Assert.assertEquals("°åÊéÉè¼ÆÄÚÈİ", context4.getText());
+		Assert.assertEquals("æ¿ä¹¦è®¾è®¡å†…å®¹", context4.getText());
 		driver.navigate().back();
-		driver.findElement(By.xpath("(//a[contains(text(),'²é¿´ÏêÏ¸')])[2]")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'æŸ¥çœ‹è¯¦ç»†')])[2]")).click();
 		
 		driver.findElement(By.id("kindStyle_0_0")).click();
 		WebElement context1_1= driver.findElement(By.id("content_0_0"));//content_content2
-		Assert.assertEquals("12345678Ñ§Ï°Ä¿±êÄÚÈİ", context1_1.getText());
+		Assert.assertEquals("12345678å­¦ä¹ ç›®æ ‡å†…å®¹", context1_1.getText());
         driver.findElement(By.id("kindStyle_0_1")).click();
 		WebElement context2_1= driver.findElement(By.id("content_0_1"));
-		Assert.assertEquals("½ÌÑ§Ä¿±êÄÚÈİ", context2_1.getText());
+		Assert.assertEquals("æ•™å­¦ç›®æ ‡å†…å®¹", context2_1.getText());
 		driver.findElement(By.id("kindStyle_0_2")).click();
 		WebElement context3_1= driver.findElement(By.id("content_0_2"));
-		Assert.assertEquals("½ÌÑ§·½·¨ÄÚÈİ", context3_1.getText());
+		Assert.assertEquals("æ•™å­¦æ–¹æ³•å†…å®¹", context3_1.getText());
 		driver.findElement(By.id("kindStyle_0_3")).click();
 		WebElement context4_1= driver.findElement(By.id("content_0_3"));
-		Assert.assertEquals("°åÊéÉè¼ÆÄÚÈİ", context4_1.getText());
-		System.out.println("Ä¥¿Î¼ìÑéÍê±Ï");
+		Assert.assertEquals("æ¿ä¹¦è®¾è®¡å†…å®¹", context4_1.getText());
+		System.out.println("ç£¨è¯¾æ£€éªŒå®Œæ¯•");
 	    driver.quit();
 
   }

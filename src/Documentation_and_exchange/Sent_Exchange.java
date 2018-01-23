@@ -14,17 +14,17 @@ public class Sent_Exchange implements TestInfo{
   public void sent_exchange() throws Exception {
 	    
 	    Uti.ChromeBrowser_setup( driver, "xmgly", "123123");
-	    driver.findElement(By.partialLinkText("½»Á÷")).click();
-	    driver.findElement(By.linkText("·¢²¼")).click();
+	    driver.findElement(By.partialLinkText("äº¤æµ")).click();
+	    driver.findElement(By.linkText("å‘å¸ƒ")).click();
 	    driver.findElement(By.id("input_title")).clear();
-	    driver.findElement(By.id("input_title")).sendKeys("½»Á÷±êÌâ");
+	    driver.findElement(By.id("input_title")).sendKeys("äº¤æµæ ‡é¢˜");
 	    driver.switchTo().frame(0);
-	    driver.findElement(By.className("ke-content")).sendKeys("½»Á÷ÄÚÈİÈİ");
+	    driver.findElement(By.className("ke-content")).sendKeys("äº¤æµå†…å®¹å®¹");
 	    driver.switchTo().defaultContent();    
-	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ÉÏ´«ÎÄ¼ş	    	
-	    driver.findElement(By.linkText("·¢ ²¼")).click();
-	    driver.findElement(By.linkText("ÍË³ö")).click();
-	    System.out.println("½»Á÷·¢²¼³É¹¦");
+	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ä¸Šä¼ æ–‡ä»¶	    	
+	    driver.findElement(By.linkText("å‘ å¸ƒ")).click();
+	    driver.findElement(By.linkText("é€€å‡º")).click();
+	    System.out.println("äº¤æµå‘å¸ƒæˆåŠŸ");
 	    driver.quit();
   }
 

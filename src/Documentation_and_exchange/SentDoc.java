@@ -14,20 +14,20 @@ public class SentDoc implements TestInfo{
   public void sent_doc() throws Exception {
    
     Uti.ChromeBrowser_setup( driver, "xmgly", "123123");
-    driver.findElement(By.partialLinkText("ÎÄÕÂ")).click();
-    driver.findElement(By.linkText("·¢²¼")).click();
+    driver.findElement(By.partialLinkText("æ–‡ç« ")).click();
+    driver.findElement(By.linkText("å‘å¸ƒ")).click();
     driver.findElement(By.id("input_title")).clear();
-    driver.findElement(By.id("input_title")).sendKeys("ÎÄÕÂ±êÌâ");
+    driver.findElement(By.id("input_title")).sendKeys("æ–‡ç« æ ‡é¢˜");
     driver.switchTo().frame(0);
-    driver.findElement(By.className("ke-content")).sendKeys("ÎÄÕÂÄÚÈİÈİ");
+    driver.findElement(By.className("ke-content")).sendKeys("æ–‡ç« å†…å®¹å®¹");
     driver.switchTo().defaultContent();    
-    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ÉÏ´«ÎÄ¼ş	    
-    Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ÉÏ´«ÊÓÆµ·½·¨  
-    Uti.waitForAlertAndCloseAlert(driver);//Ê®ÃëÄÚÇ¿ÖÆµÈ´ıalert¿ò³öÏÖ£¬Ã¿Ãë¼ì²éÒ»´Î£¬µÚ¼¸Ãë¼ì²é²»µ½£¬¾ÍÅ×³öÒì³£     
-    driver.findElement(By.className("video_close")).click();//¹Ø±Õ´°¿Ú    
-    driver.findElement(By.linkText("·¢ ²¼")).click();
-    driver.findElement(By.linkText("ÍË³ö")).click();
-    System.out.println("ÎÄÕÂ·¢²¼³É¹¦");
+    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ä¸Šä¼ æ–‡ä»¶	    
+    Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ä¸Šä¼ è§†é¢‘æ–¹æ³•  
+    Uti.waitForAlertAndCloseAlert(driver);//åç§’å†…å¼ºåˆ¶ç­‰å¾…alertæ¡†å‡ºç°ï¼Œæ¯ç§’æ£€æŸ¥ä¸€æ¬¡ï¼Œç¬¬å‡ ç§’æ£€æŸ¥ä¸åˆ°ï¼Œå°±æŠ›å‡ºå¼‚å¸¸     
+    driver.findElement(By.className("video_close")).click();//å…³é—­çª—å£    
+    driver.findElement(By.linkText("å‘ å¸ƒ")).click();
+    driver.findElement(By.linkText("é€€å‡º")).click();
+    System.out.println("æ–‡ç« å‘å¸ƒæˆåŠŸ");
     driver.quit();
     }
 

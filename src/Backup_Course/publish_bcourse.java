@@ -15,30 +15,30 @@ public class publish_bcourse implements TestInfo{
 		
 		Uti.ChromeBrowser_setup(driver, "suke", "123123");
 		
-		driver.findElement(By.partialLinkText("±¸¿Î")).click();
-		driver.findElement(By.linkText("·¢²¼")).click();
+		driver.findElement(By.partialLinkText("å¤‡è¯¾")).click();
+		driver.findElement(By.linkText("å‘å¸ƒ")).click();
 		
-		driver.findElement(By.id("teachingplanTitle")).sendKeys("×¨¼Ò·¢²¼µÄ±¸¿Î1");
+		driver.findElement(By.id("teachingplanTitle")).sendKeys("ä¸“å®¶å‘å¸ƒçš„å¤‡è¯¾1");
 		driver.findElement(By.id("endtime")).sendKeys("2018-03-02");
 		
 		driver.switchTo().frame(0);
-		driver.findElement(By.className("ke-content")).sendKeys("±¸¿ÎÄÚÈİ");
+		driver.findElement(By.className("ke-content")).sendKeys("å¤‡è¯¾å†…å®¹");
 		driver.switchTo().defaultContent();
 		
 		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
 		
 		try {
-			driver.findElement(By.linkText("·¢²¼")).click();
+			driver.findElement(By.linkText("å‘å¸ƒ")).click();
 		} catch (Exception e) {
-			System.out.println("±¸¿ÎÃ»ÓĞ·¢²¼³É¹¦");
+			System.out.println("å¤‡è¯¾æ²¡æœ‰å‘å¸ƒæˆåŠŸ");
 			// TODO: handle exception
 		}
-	    System.out.println("±¸¿Î·¢²¼³É¹¦");
+	    System.out.println("å¤‡è¯¾å‘å¸ƒæˆåŠŸ");
 	    driver.quit();
 		
 //		driver.findElement(By.id("tab1")).click();
 //	    Thread.sleep(1000);
-//		driver.findElement(By.linkText("×¨¼Ò·¢²¼µÄ±¸¿Î1")).click();//µãÁË²»±¨´í£¬Ö¤Ã÷È«²¿±¸¿ÎÏÂÃæ´æÔÚ£¬ÓĞÕâ¸ö¿Î³Ì
+//		driver.findElement(By.linkText("ä¸“å®¶å‘å¸ƒçš„å¤‡è¯¾1")).click();//ç‚¹äº†ä¸æŠ¥é”™ï¼Œè¯æ˜å…¨éƒ¨å¤‡è¯¾ä¸‹é¢å­˜åœ¨ï¼Œæœ‰è¿™ä¸ªè¯¾ç¨‹
 
   }
 

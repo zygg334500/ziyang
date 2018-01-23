@@ -17,29 +17,29 @@ public class  Advice_to_activity implements TestInfo{
 
 		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
 		//driver.manage().window().maximize();
-		driver.findElement(By.partialLinkText("»î¶¯")).click();//Ô­À´ÊÇÓÃxpath»òÕßÊÇÓÃlinkText£¬¶¼²»ÈçÕâ¸öºÃ£¬Õâ¸ö¿É±äĞÔ±È½ÏºÃ
-		driver.findElement(By.linkText("Ìá½»ÏêÇé")).click();
-		driver.findElement(By.xpath("(//a[contains(text(),'Î´ÅúÔÄ')])")).click();
+		driver.findElement(By.partialLinkText("æ´»åŠ¨")).click();//åŸæ¥æ˜¯ç”¨xpathæˆ–è€…æ˜¯ç”¨linkTextï¼Œéƒ½ä¸å¦‚è¿™ä¸ªå¥½ï¼Œè¿™ä¸ªå¯å˜æ€§æ¯”è¾ƒå¥½
+		driver.findElement(By.linkText("æäº¤è¯¦æƒ…")).click();
+		driver.findElement(By.xpath("(//a[contains(text(),'æœªæ‰¹é˜…')])")).click();
 		Thread.sleep(1000);
 		try {
-			driver.findElement(By.linkText("²é¿´²¢ÅúÔÄ")).click();
+			driver.findElement(By.linkText("æŸ¥çœ‹å¹¶æ‰¹é˜…")).click();
 		} catch (Exception e) {
 			// TODO: handle exception
 			driver.navigate().refresh();
-			driver.findElement(By.xpath("(//a[contains(text(),'Î´ÅúÔÄ')])")).click();
+			driver.findElement(By.xpath("(//a[contains(text(),'æœªæ‰¹é˜…')])")).click();
 			Thread.sleep(1000);
-			driver.findElement(By.linkText("²é¿´²¢ÅúÔÄ")).click();
+			driver.findElement(By.linkText("æŸ¥çœ‹å¹¶æ‰¹é˜…")).click();
 		}
 
 		Uti.ChangeWindows(driver, 2);
 		driver.findElement(By.id("RadioGroup1_0")).click();
-		driver.findElement(By.id("TextArea2")).sendKeys("¸ÉµÃÆ¯ÁÁ£¬ÀÏÊ¦ÏàĞÅÄã");
+		driver.findElement(By.id("TextArea2")).sendKeys("å¹²å¾—æ¼‚äº®ï¼Œè€å¸ˆç›¸ä¿¡ä½ ");
 		driver.findElement(By.name("isRecommend")).click();
-		driver.findElement(By.cssSelector("input[class='btn l']")).click();//´¦Àí´ø¿Õ¸ñµÄclassnameµÄ·½·¨£¬¶ø²»ÊÇÖ±½ÓÓÃclassnameµÄ·½·¨²éÕÒ£¬ÄÇÑù×Ó»á±¨´í
+		driver.findElement(By.cssSelector("input[class='btn l']")).click();//å¤„ç†å¸¦ç©ºæ ¼çš„classnameçš„æ–¹æ³•ï¼Œè€Œä¸æ˜¯ç›´æ¥ç”¨classnameçš„æ–¹æ³•æŸ¥æ‰¾ï¼Œé‚£æ ·å­ä¼šæŠ¥é”™
 
 		Thread.sleep(1000);
 		Uti.waitForAlertAndCloseAlert(driver);   
-		System.out.println("»î¶¯ÅúÔÄ³É¹¦");
+		System.out.println("æ´»åŠ¨æ‰¹é˜…æˆåŠŸ");
 		driver.quit();
 	}
 
