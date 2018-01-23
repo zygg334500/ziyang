@@ -23,8 +23,10 @@ public class  Jitibeike_zhuanjia{
   @Test(dataProvider = "zhuanjiaKill",dataProviderClass = DateProvider.class)
   public  void publish_activity(String username,String password,String filePath,String vedioPath,String plist,String clist) throws Exception {	
 	 
-	    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		Uti.ChromeBrowser_setup(driver, username, password); 
+	    //DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
+	    ChromeDriver driver= new ChromeDriver();
+	    Uti.ChromeBrowser_setup(driver, username, password); 
 	  
 	driver.findElement(By.partialLinkText("活动")).click();//原来是用xpath或者是用linkText，都不如这个好，这个可变性比较好
     driver.findElement(By.linkText("发布")).click();
@@ -35,7 +37,7 @@ public class  Jitibeike_zhuanjia{
     TitleQueue.push(activityName,this.getClass().getName(),"Activity.To_joinActivity");
     System.out.println(activityName);
     driver.findElement(By.id("activityName")).sendKeys(activityName);
-    Uti.resource(driver);
+    Uti.resource(driver);//新增资源体系分类
     driver.findElement(By.id("startTime")).click();
     driver.findElement(By.id("startTime")).clear();
     driver.findElement(By.id("startTime")).sendKeys(Uti.get_currenttime());
@@ -56,7 +58,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     driver.findElement(By.linkText("发布")).click();
@@ -88,7 +90,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     driver.findElement(By.linkText("发布")).click();
@@ -120,7 +122,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     
@@ -137,7 +139,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     driver.findElement(By.linkText("发布")).click();
@@ -172,7 +174,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     
@@ -187,7 +189,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     driver.findElement(By.linkText("发布")).click();
@@ -222,7 +224,7 @@ public class  Jitibeike_zhuanjia{
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
     driver.findElement(By.id("SWFUpload_0")).click();
-    Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+    Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
     Thread.sleep(6000);//上传文件   
     driver.findElement(By.linkText("保存")).click();
     driver.findElement(By.linkText("发布")).click();
@@ -301,7 +303,7 @@ public class  Jitibeike_zhuanjia{
   driver.findElement(By.id("SWFUpload_0")).click();
   driver.findElement(By.id("SWFUpload_0")).click();
   driver.findElement(By.id("SWFUpload_0")).click();
-  Runtime.getRuntime().exec("C:/Users/Administrator/Downloads/uploadFile.exe");
+  Runtime.getRuntime().exec("E:/Downloads/uploadFile.exe");
   Thread.sleep(6000);//上传文件   
   driver.findElement(By.linkText("保存")).click();
   driver.findElement(By.linkText("发布")).click();

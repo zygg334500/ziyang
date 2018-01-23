@@ -14,10 +14,22 @@ private static final ChromeDriver driver=new ChromeDriver();
   public void read() throws Exception {
 	  
 		
-		Uti.ChromeBrowser_setup(driver, "suke", "123123");
+		Uti.ChromeBrowser_setup(driver, "devzhuanjia", "3edc$RFV");
 		
 		driver.findElement(By.partialLinkText("备课")).click();
-		driver.findElement(By.xpath("(//a[contains(text(),'查看详情')])[1]")).click();
+		driver.findElement(By.id("tab1")).click();
+		Thread.sleep(500);
+		try {
+			driver.findElement(By.xpath("(//a[contains(text(),'查看详情')])[1]")).click();
+
+		} catch (Exception e) {
+			//管理员或者专家，批阅的位置不同，全部备课的tab序号不一致，切换账号有可能出问题，因此写了try做判断
+			driver.findElement(By.id("tab2")).click();
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//a[contains(text(),'查看详情')])[1]")).click();
+
+			// TODO: handle exception
+		}
 		
 		driver.findElement(By.linkText("未批阅")).click();
 		Thread.sleep(2000);
