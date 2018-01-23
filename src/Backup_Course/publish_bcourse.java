@@ -13,19 +13,17 @@ public class publish_bcourse implements TestInfo{
   @Test(groups = {"Backup_Course"})
   public void read_beker() throws Exception {
 		
-		Uti.ChromeBrowser_setup(driver, "suke", "123123");
+		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
 		
 		driver.findElement(By.partialLinkText("备课")).click();
 		driver.findElement(By.linkText("发布")).click();
 		
 		driver.findElement(By.id("teachingplanTitle")).sendKeys("专家发布的备课1");
 		driver.findElement(By.id("endtime")).sendKeys("2018-03-02");
+		 
+        Uti.richText(driver, 0, "发布备课内容");
 		
-		driver.switchTo().frame(0);
-		driver.findElement(By.className("ke-content")).sendKeys("备课内容");
-		driver.switchTo().defaultContent();
-		
-		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
+		Uti.UploadFile(driver, "e:/Downloads/uploadFile.exe","SWFUpload_0");
 		
 		try {
 			driver.findElement(By.linkText("发布")).click();
