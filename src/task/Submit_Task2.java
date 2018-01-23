@@ -23,7 +23,8 @@ public class Submit_Task2 {
   @Test(groups = {"task"},dataProvider = "xueyuan2withfilePath",dataProviderClass = DateProvider.class)
   public void submit_Task(String username,String password,String filePath) throws Exception {
 	    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  Uti.ChromeBrowser_setup(driver, username, password);
+	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	 
+	    Uti.ChromeBrowser_setup(driver, username, password);
 	    
 	    driver.findElement(By.partialLinkText("作业")).click();
         driver.findElement(By.id("tab3")).click();
@@ -35,9 +36,7 @@ public class Submit_Task2 {
 		}
         driver.findElement(By.linkText("提交")).click();
         Thread.sleep(2000);
-        driver.switchTo().frame(driver.findElement(By.className("ke-edit-iframe")));
-        driver.findElement(By.className("ke-content")).sendKeys("老师好啊，我发布了作业内容，请查看附件!");
-        driver.switchTo().defaultContent();
+        Uti.richText(driver,0,"老师好啊，我发布了作业内容，请查看附件!");
         Uti.UploadFile(driver, filePath,"SWFUpload_0");//上传文件
 	    driver.findElement(By.linkText("提 交")).click();
 	    System.out.println("作业参加成功");

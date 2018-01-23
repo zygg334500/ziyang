@@ -29,9 +29,7 @@ public class Publish_Task implements TestInfo{
 	    driver.findElement(By.id("endtime")).sendKeys(Uti.get_currenttime());
 	    
 	    //进入iframe ，添加富文本内容
-	    driver.switchTo().frame(0);
-	    driver.findElement(By.className("ke-content")).sendKeys("发布作业的内容文字");
-	    driver.switchTo().defaultContent();//跳出到整个页面下
+	    Uti.richText(driver,0,"发布作业的内容文字");
 	    
 	    //上传文件和视频
 	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件	    

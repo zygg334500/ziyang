@@ -24,9 +24,7 @@ public class join_moke implements TestInfo{
 		System.out.println("\""+"发起人：层级专家 李远玉 截止时间："+time+"\"");
 		if(a.indexOf(time)!=-1){
 	    	driver.findElement(By.linkText("参与磨课")).click();
-	    	driver.switchTo().frame(0);
-	    	driver.findElement(By.className("ke-content")).sendKeys("12345678");
-	    	driver.switchTo().defaultContent();
+	    	Uti.richText(driver,0,"12345678");
 	    	driver.findElement(By.linkText("发布")).click(); 		    
 	    }else{
 	    driver.findElement(By.linkText("返回")).click();

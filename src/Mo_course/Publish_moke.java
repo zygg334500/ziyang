@@ -14,7 +14,7 @@ public class Publish_moke implements TestInfo{
 	@Test(groups = {"Mo_course"})
   public void publish_moke() throws Exception {
 
-		Uti.ChromeBrowser_setup(driver, "suke", "123123");
+		Uti.ChromeBrowser_setup(driver, "devteacher", "3edc$RFV");
 		
 		driver.findElement(By.partialLinkText("磨课")).click();
 		driver.findElement(By.linkText("发布")).click();	
@@ -30,25 +30,19 @@ public class Publish_moke implements TestInfo{
 		driver.findElement(By.linkText("确定")).click();
 		driver.findElement(By.id("input_title")).sendKeys("魔克猪1");
 		
-		driver.switchTo().frame(0);
-		driver.findElement(By.className("ke-content")).sendKeys("信息概述");
-		driver.switchTo().defaultContent();
+		Uti.richText(driver,0,"信息概述");
 		
-		driver.switchTo().frame(1);
-		driver.findElement(By.className("ke-content")).sendKeys("学习目标内容");
-		driver.switchTo().defaultContent();
+		Uti.richText(driver,1,"学习目标内容");
 		
-		driver.switchTo().frame(2);
-		driver.findElement(By.className("ke-content")).sendKeys("教学目标内容");
-		driver.switchTo().defaultContent();
+		driver.findElement(By.xpath("//li[@id='0'][text()='教学方法']")).click();
+		Uti.richText(driver,2,"教学目标内容");
 		
-		driver.switchTo().frame(3);
-		driver.findElement(By.className("ke-content")).sendKeys("教学方法内容");
-		driver.switchTo().defaultContent();
-	  
-		driver.switchTo().frame(4);
-		driver.findElement(By.className("ke-content")).sendKeys("板书设计内容");
-		driver.switchTo().defaultContent();	
+		driver.findElement(By.xpath("//li[@id='0'][text()='教学过程']")).click();
+		Uti.richText(driver,3,"教学方法内容");
+
+		driver.findElement(By.xpath("//li[@id='0'][text()='板书设计']")).click();
+		Uti.richText(driver,4,"板书设计内容");
+		
 		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
 		driver.findElement(By.linkText("发布")).click();
 	    System.out.println("磨课发布成功");

@@ -35,9 +35,7 @@ public class Submit_Task3{
      		}
         driver.findElement(By.linkText("提交")).click();  
         Thread.sleep(2000);
-        driver.switchTo().frame(driver.findElement(By.className("ke-edit-iframe")));
-        driver.findElement(By.className("ke-content")).sendKeys("老师好啊，我发布了作业内容，请查看附件!");
-        driver.switchTo().defaultContent();
+        Uti.richText(driver,0,"老师好啊，我发布了作业内容，请查看附件!");
         try {
         	Uti.UploadVedio(driver,vedioPath);//上传视频方法
 		} catch (Exception e) {

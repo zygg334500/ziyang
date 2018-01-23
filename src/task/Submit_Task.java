@@ -16,22 +16,20 @@ public class Submit_Task implements TestInfo{
   @Test(groups = {"task"})
   public void submit_Task() throws Exception {
 		
-		Uti.ChromeBrowser_setup(driver, "1.44105915053E12", "123123");
+		Uti.ChromeBrowser_setup(driver, "devstudent2", "123123");
 	    
 	    driver.findElement(By.partialLinkText("作业")).click();
         driver.findElement(By.id("tab3")).click();
         Thread.sleep(2000);
 
-        driver.findElement(By.linkText("新学习的作业3")).click();
+        driver.findElement(By.partialLinkText("新学习的作业3")).click();
         
 	    java.util.Set<String> handles1 = driver.getWindowHandles();//获取所有窗口句柄  
 	    List<String> it1 = new ArrayList<String>(handles1);
 	    driver.switchTo().window(it1.get(2));
         Thread.sleep(1000);
         
-        driver.switchTo().frame(driver.findElement(By.className("ke-edit-iframe")));
-        driver.findElement(By.className("ke-content")).sendKeys("老师好啊，我发布了作业内容，请查看附件!");
-        driver.switchTo().defaultContent();
+        Uti.richText(driver,0,"老师好啊，我发布了作业内容，请查看附件!");
         
         Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件
         try {

@@ -1,9 +1,6 @@
 package Vedio;
 
-import java.net.MalformedURLException;
 import java.net.URL;
-
-import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
 import DateProvider.DateProvider;
-
+import junit.framework.Assert;
 import uti.Uti;
 
 public class EditAndDeleteThePublishedVedio {
@@ -22,7 +19,7 @@ public class EditAndDeleteThePublishedVedio {
     public void upVedio(String username,String password,String filePath,String vedioPath) throws Exception {
 	    
 		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
+	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	
 	    Uti.ChromeBrowser_setup(driver, username, password);
 	    driver.findElement(By.partialLinkText("视频")).click();
 	    driver.findElement(By.id("upload_pop")).click();
