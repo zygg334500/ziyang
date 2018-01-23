@@ -20,8 +20,10 @@ public class JoinActivity3{
 
   @Test(groups = {"Activity.guanliyuan"},dataProvider = "xueyuanFilePath3",dataProviderClass = DateProvider.class)
   public void studuentakePartActivity(String username,String password,String filePath,String vedioPath)  throws Exception {
-	    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  Uti.ChromeBrowser_setup(driver, username, password);
+	    //DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  
+	  ChromeDriver driver=new ChromeDriver();
+	  Uti.ChromeBrowser_setup(driver, username, password);
 	  driver.findElement(By.partialLinkText("活动")).click();
 	  driver.findElement(By.id("tab1")).click();
 	  Thread.sleep(1000);

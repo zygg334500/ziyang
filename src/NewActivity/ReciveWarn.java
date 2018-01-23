@@ -23,8 +23,10 @@ public class ReciveWarn{
   
   @Test(groups = {"task"},dataProvider = "xueyuan4",dataProviderClass = DateProvider.class)
   public void submit_Task(String username,String password) throws Exception {
-	    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  Uti.ChromeBrowser_setup(driver, username, password);
+	    //DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  
+	    ChromeDriver driver=new ChromeDriver();
+	    Uti.ChromeBrowser_setup(driver, username, password);
 	   driver.findElement(By.partialLinkText("通知")).click();
 	   Uti.ChangeWindows(driver, 2);
 	   String title =TitleQueue2.pop(this.getClass().getName());

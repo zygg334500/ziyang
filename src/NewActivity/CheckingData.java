@@ -19,8 +19,9 @@ public class CheckingData{
 
       @Test(groups = {"task"},dataProvider = "teacherFilePath",dataProviderClass = DateProvider.class)
   public void making(String username,String password,String filePath,String vedioPath) throws Exception {
-		    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-		    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
+		   // DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+		   // WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
+		    ChromeDriver driver=new ChromeDriver();
 		    Uti.ChromeBrowser_setup(driver, username, password);
 	    
 	    driver.findElement(By.partialLinkText("活动")).click();

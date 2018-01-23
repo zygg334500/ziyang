@@ -56,18 +56,18 @@ public class  Publish_ActivitywithallStep implements TestInfo{
 		driver.findElement(By.id("name")).clear();
 		driver.findElement(By.id("name")).sendKeys("嘿嘿");
 		driver.findElement(By.linkText("选择工具")).click();
-//		driver.findElement(By.id("a3")).click();
-//
-//		Thread.sleep(3000);
-//		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件
-//
-//		driver.findElement(By.linkText("保存")).click();
-//
-//		driver.findElement(By.linkText("新增环节")).click();
-//		driver.findElement(By.id("name")).clear();
-//		driver.findElement(By.id("name")).sendKeys("过的身高大概");
-//		driver.findElement(By.linkText("选择工具")).click();
-		//没有附件暂时不添加
+		driver.findElement(By.id("a3")).click();
+
+		Thread.sleep(3000);
+		Uti.UploadFile(driver, "e:/Downloads/uploadFile.exe","SWFUpload_0");//上传文件
+
+		driver.findElement(By.linkText("保存")).click();
+
+		driver.findElement(By.linkText("新增环节")).click();
+		driver.findElement(By.id("name")).clear();
+		driver.findElement(By.id("name")).sendKeys("过的身高大概");
+		driver.findElement(By.linkText("选择工具")).click();
+		
 		driver.findElement(By.id("a4")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.linkText("保存")).click(); 
@@ -92,7 +92,7 @@ public class  Publish_ActivitywithallStep implements TestInfo{
 //		driver.findElement(By.id("a6")).click();
 //		Thread.sleep(1000);
 //
-//		Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//上传视频方法
+//		Uti.UploadVedio(driver,"e:/Downloads/uploadVideo.exe");//上传视频方法
 //
 //		Uti.waitForAlertAndCloseAlert(driver);//十秒内强制等待alert框出现，每秒检查一次，第几秒检查不到，就抛出异常
 //		driver.findElement(By.className("video_close")).click();//关闭窗口

@@ -23,7 +23,7 @@ public class ChengGuoZhanSi implements TestInfo{
 	  Uti.ChromeBrowser_setup(driver, username, password);
 	  driver.findElement(By.partialLinkText("活动")).click();//原来是用xpath或者是用linkText，都不如这个好，这个可变性比较好
 	  driver.findElement(By.linkText("发布")).click();
-	  driver.findElement(By.linkText("研读")).click();
+	  driver.findElement(By.className("yd")).click();
 	  String huodongTitle=Uti.get_activityName();
 	  TitleQueue.push(huodongTitle,this.getClass().getName(),"NewActivity.JoinActivity");
 	  driver.findElement(By.id("activityName")).sendKeys(huodongTitle);
