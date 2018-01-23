@@ -13,27 +13,27 @@ public class Making implements TestInfo{
   public void making() throws Exception {
 		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
 	    
-	    driver.findElement(By.partialLinkText("×÷Òµ")).click();
+	    driver.findElement(By.partialLinkText("ä½œä¸š")).click();
 
-	    driver.findElement(By.xpath("(//a[contains(text(),'È¥ÅúÔÄ')])[1]")).click();
+	    driver.findElement(By.xpath("(//a[contains(text(),'å»æ‰¹é˜…')])[1]")).click();
 	    try {
-	    	driver.findElement(By.xpath("(//a[contains(text(),'Î´ÅúÔÄ')])")).click();
-	    	driver.findElement(By.linkText("ÅúÔÄ")).click();
+	    	driver.findElement(By.xpath("(//a[contains(text(),'æœªæ‰¹é˜…')])")).click();
+	    	driver.findElement(By.linkText("æ‰¹é˜…")).click();
 		} catch (Exception e) {
 			// TODO: handle exception
 			driver.navigate().refresh();
-			driver.findElement(By.xpath("(//a[contains(text(),'Î´ÅúÔÄ')])")).click();
-			driver.findElement(By.linkText("ÅúÔÄ")).click();
+			driver.findElement(By.xpath("(//a[contains(text(),'æœªæ‰¹é˜…')])")).click();
+			driver.findElement(By.linkText("æ‰¹é˜…")).click();
 		}
 	    driver.findElement(By.xpath("(//input[contains(@value,'verygood')])")).click();
-	    driver.findElement(By.id("TextArea1")).sendKeys("Í¬Ñ§×êÑĞµÄºÜÉî°¡");
-	    driver.findElement(By.name("messages")).sendKeys("ÀÏÊ¦¿´ºÃÄã£¬ÔÙ½ÓÔÙÀ÷");
+	    driver.findElement(By.id("TextArea1")).sendKeys("åŒå­¦é’»ç ”çš„å¾ˆæ·±å•Š");
+	    driver.findElement(By.name("messages")).sendKeys("è€å¸ˆçœ‹å¥½ä½ ï¼Œå†æ¥å†å‰");
 	    driver.findElement(By.name("isRecommend")).click();
-	    driver.findElement(By.linkText("ÅúÔÄÍê³É")).click();
+	    driver.findElement(By.linkText("æ‰¹é˜…å®Œæˆ")).click();
 	    Thread.sleep(4000);    
 	    Alert alt=driver.switchTo().alert();
 	    alt.dismiss();
-	    System.out.println("×÷ÒµÅúÔÄ³É¹¦");
+	    System.out.println("ä½œä¸šæ‰¹é˜…æˆåŠŸ");
 	    driver.quit();
   }
 

@@ -6,7 +6,7 @@ import org.testng.ITestListener;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
-//ÇåÀíÊ§°ÜÖØÅÜµÄÓÃÀı£¬Ö»ÏÔÊ¾×îºóÒ»Ìõ
+//æ¸…ç†å¤±è´¥é‡è·‘çš„ç”¨ä¾‹ï¼Œåªæ˜¾ç¤ºæœ€åä¸€æ¡
 public class Clean_testcase implements ITestListener {
 
     @Override

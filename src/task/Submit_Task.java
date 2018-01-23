@@ -18,30 +18,30 @@ public class Submit_Task implements TestInfo{
 		
 		Uti.ChromeBrowser_setup(driver, "1.44105915053E12", "123123");
 	    
-	    driver.findElement(By.partialLinkText("×÷Òµ")).click();
+	    driver.findElement(By.partialLinkText("ä½œä¸š")).click();
         driver.findElement(By.id("tab3")).click();
         Thread.sleep(2000);
 
-        driver.findElement(By.linkText("ĞÂÑ§Ï°µÄ×÷Òµ3")).click();
+        driver.findElement(By.linkText("æ–°å­¦ä¹ çš„ä½œä¸š3")).click();
         
-	    java.util.Set<String> handles1 = driver.getWindowHandles();//»ñÈ¡ËùÓĞ´°¿Ú¾ä±ú  
+	    java.util.Set<String> handles1 = driver.getWindowHandles();//è·å–æ‰€æœ‰çª—å£å¥æŸ„  
 	    List<String> it1 = new ArrayList<String>(handles1);
 	    driver.switchTo().window(it1.get(2));
         Thread.sleep(1000);
         
         driver.switchTo().frame(driver.findElement(By.className("ke-edit-iframe")));
-        driver.findElement(By.className("ke-content")).sendKeys("ÀÏÊ¦ºÃ°¡£¬ÎÒ·¢²¼ÁË×÷ÒµÄÚÈİ£¬Çë²é¿´¸½¼ş!");
+        driver.findElement(By.className("ke-content")).sendKeys("è€å¸ˆå¥½å•Šï¼Œæˆ‘å‘å¸ƒäº†ä½œä¸šå†…å®¹ï¼Œè¯·æŸ¥çœ‹é™„ä»¶!");
         driver.switchTo().defaultContent();
         
-        Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ÉÏ´«ÎÄ¼ş
+        Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ä¸Šä¼ æ–‡ä»¶
         try {
-        	Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ÉÏ´«ÊÓÆµ·½·¨
+        	Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ä¸Šä¼ è§†é¢‘æ–¹æ³•
 		} catch (Exception e) {
 		}finally{
         Uti.waitForAlertAndCloseAlert(driver);
-	    driver.findElement(By.className("video_close")).click();//¹Ø±Õ´°¿Ú	
-	    driver.findElement(By.linkText("Ìá ½»")).click();
-	    System.out.println("×÷Òµ²Î¼Ó³É¹¦");
+	    driver.findElement(By.className("video_close")).click();//å…³é—­çª—å£	
+	    driver.findElement(By.linkText("æ äº¤")).click();
+	    System.out.println("ä½œä¸šå‚åŠ æˆåŠŸ");
 	    driver.quit();
 		}
   }

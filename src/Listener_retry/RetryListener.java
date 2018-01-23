@@ -7,13 +7,13 @@ import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.ITestAnnotation;
 public class RetryListener implements IAnnotationTransformer {
-//ÓÃÀıÊ§°Ü£¬×Ô¶¯ÖØĞÂÅÜÒ»±ß£¬ÖØĞ´transform·½·¨
+//ç”¨ä¾‹å¤±è´¥ï¼Œè‡ªåŠ¨é‡æ–°è·‘ä¸€è¾¹ï¼Œé‡å†™transformæ–¹æ³•
 	@Override
 	public void transform(ITestAnnotation annotation, Class testClass, 
 Constructor testConstructor, Method testMethod) {
 		IRetryAnalyzer retry = annotation.getRetryAnalyzer();
         if (retry == null) {
-            annotation.setRetryAnalyzer(TestngRetry.class);//¸ù¾İTestngRetry´«¹ıÀ´µÄ²¼¶ûÖµ£¬¾ö¶¨ÊÇ·ñÒªÖØÅÜ
+            annotation.setRetryAnalyzer(TestngRetry.class);//æ ¹æ®TestngRetryä¼ è¿‡æ¥çš„å¸ƒå°”å€¼ï¼Œå†³å®šæ˜¯å¦è¦é‡è·‘
         }		
 	}
 

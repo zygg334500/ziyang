@@ -16,42 +16,42 @@ public class Publish_moke implements TestInfo{
 
 		Uti.ChromeBrowser_setup(driver, "suke", "123123");
 		
-		driver.findElement(By.partialLinkText("Ä¥¿Î")).click();
-		driver.findElement(By.linkText("·¢²¼")).click();	
+		driver.findElement(By.partialLinkText("ç£¨è¯¾")).click();
+		driver.findElement(By.linkText("å‘å¸ƒ")).click();	
 		
 
 		driver.findElement(By.name("startTime")).sendKeys(Uti.get_currenttime());
 		driver.findElement(By.name("endTime")).sendKeys(Uti.get_currenttime());
-		new Select(driver.findElement(By.id("kindId"))).selectByVisibleText("½ÌÑ§Éè¼Æ");
+		new Select(driver.findElement(By.id("kindId"))).selectByVisibleText("æ•™å­¦è®¾è®¡");
 		driver.findElement(By.name("cengji")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("dict_tree_con1_1_check")).click();
 		driver.findElement(By.id("dict_tree_con2_1_check")).click();
-		driver.findElement(By.linkText("È·¶¨")).click();
-		driver.findElement(By.id("input_title")).sendKeys("Ä§¿ËÖí1");
+		driver.findElement(By.linkText("ç¡®å®š")).click();
+		driver.findElement(By.id("input_title")).sendKeys("é­”å…‹çŒª1");
 		
 		driver.switchTo().frame(0);
-		driver.findElement(By.className("ke-content")).sendKeys("ĞÅÏ¢¸ÅÊö");
+		driver.findElement(By.className("ke-content")).sendKeys("ä¿¡æ¯æ¦‚è¿°");
 		driver.switchTo().defaultContent();
 		
 		driver.switchTo().frame(1);
-		driver.findElement(By.className("ke-content")).sendKeys("Ñ§Ï°Ä¿±êÄÚÈİ");
+		driver.findElement(By.className("ke-content")).sendKeys("å­¦ä¹ ç›®æ ‡å†…å®¹");
 		driver.switchTo().defaultContent();
 		
 		driver.switchTo().frame(2);
-		driver.findElement(By.className("ke-content")).sendKeys("½ÌÑ§Ä¿±êÄÚÈİ");
+		driver.findElement(By.className("ke-content")).sendKeys("æ•™å­¦ç›®æ ‡å†…å®¹");
 		driver.switchTo().defaultContent();
 		
 		driver.switchTo().frame(3);
-		driver.findElement(By.className("ke-content")).sendKeys("½ÌÑ§·½·¨ÄÚÈİ");
+		driver.findElement(By.className("ke-content")).sendKeys("æ•™å­¦æ–¹æ³•å†…å®¹");
 		driver.switchTo().defaultContent();
 	  
 		driver.switchTo().frame(4);
-		driver.findElement(By.className("ke-content")).sendKeys("°åÊéÉè¼ÆÄÚÈİ");
+		driver.findElement(By.className("ke-content")).sendKeys("æ¿ä¹¦è®¾è®¡å†…å®¹");
 		driver.switchTo().defaultContent();	
 		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
-		driver.findElement(By.linkText("·¢²¼")).click();
-	    System.out.println("Ä¥¿Î·¢²¼³É¹¦");
+		driver.findElement(By.linkText("å‘å¸ƒ")).click();
+	    System.out.println("ç£¨è¯¾å‘å¸ƒæˆåŠŸ");
 	    driver.quit();
   }
 

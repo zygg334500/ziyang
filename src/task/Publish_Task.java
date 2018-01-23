@@ -16,33 +16,33 @@ public class Publish_Task implements TestInfo{
 		
 		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
 		
-	    driver.findElement(By.partialLinkText("×÷Òµ")).click();
-	    driver.findElement(By.linkText("·¢²¼")).click();
-	    new Select(driver.findElement(By.id("p_list"))).selectByVisibleText("ÓïÎÄ½ÌÑ§¼Æ»®");//Ñ¡ÔñÏÂÀ­ÁĞ±íÖĞµÄÓïÎÄ½ÌÑ§¼Æ»®
-        driver.findElement(By.id("input_title")).sendKeys("ĞÂÑ§Ï°µÄ×÷Òµ3");
+	    driver.findElement(By.partialLinkText("ä½œä¸š")).click();
+	    driver.findElement(By.linkText("å‘å¸ƒ")).click();
+	    new Select(driver.findElement(By.id("p_list"))).selectByVisibleText("è¯­æ–‡æ•™å­¦è®¡åˆ’");//é€‰æ‹©ä¸‹æ‹‰åˆ—è¡¨ä¸­çš„è¯­æ–‡æ•™å­¦è®¡åˆ’
+        driver.findElement(By.id("input_title")).sendKeys("æ–°å­¦ä¹ çš„ä½œä¸š3");
 	    Thread.sleep(1000);
         driver.findElement(By.id("endtime")).click();
         Thread.sleep(1000);   
         JavascriptExecutor removeAttribute = (JavascriptExecutor)driver;  
         //remove readonly attribute
-        removeAttribute.executeScript("var setDate=document.getElementById(\"endtime\");setDate.removeAttribute('readonly');") ;//Í¨¹ıjavaScriptÒÆ³ıreadonly×Ö¶Î
+        removeAttribute.executeScript("var setDate=document.getElementById(\"endtime\");setDate.removeAttribute('readonly');") ;//é€šè¿‡javaScriptç§»é™¤readonlyå­—æ®µ
 	    driver.findElement(By.id("endtime")).sendKeys(Uti.get_currenttime());
 	    
-	    //½øÈëiframe £¬Ìí¼Ó¸»ÎÄ±¾ÄÚÈİ
+	    //è¿›å…¥iframe ï¼Œæ·»åŠ å¯Œæ–‡æœ¬å†…å®¹
 	    driver.switchTo().frame(0);
-	    driver.findElement(By.className("ke-content")).sendKeys("·¢²¼×÷ÒµµÄÄÚÈİÎÄ×Ö");
-	    driver.switchTo().defaultContent();//Ìø³öµ½Õû¸öÒ³ÃæÏÂ
+	    driver.findElement(By.className("ke-content")).sendKeys("å‘å¸ƒä½œä¸šçš„å†…å®¹æ–‡å­—");
+	    driver.switchTo().defaultContent();//è·³å‡ºåˆ°æ•´ä¸ªé¡µé¢ä¸‹
 	    
-	    //ÉÏ´«ÎÄ¼şºÍÊÓÆµ
-	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ÉÏ´«ÎÄ¼ş	    
-	    Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ÉÏ´«ÊÓÆµ·½·¨  
-	    Uti.waitForAlertAndCloseAlert(driver);//Ê®ÃëÄÚÇ¿ÖÆµÈ´ıalert¿ò³öÏÖ£¬Ã¿Ãë¼ì²éÒ»´Î£¬µÚ¼¸Ãë¼ì²é²»µ½£¬¾ÍÅ×³öÒì³£     
-	    driver.findElement(By.className("video_close")).click();//¹Ø±Õ´°¿Ú
+	    //ä¸Šä¼ æ–‡ä»¶å’Œè§†é¢‘
+	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//ä¸Šä¼ æ–‡ä»¶	    
+	    Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//ä¸Šä¼ è§†é¢‘æ–¹æ³•  
+	    Uti.waitForAlertAndCloseAlert(driver);//åç§’å†…å¼ºåˆ¶ç­‰å¾…alertæ¡†å‡ºç°ï¼Œæ¯ç§’æ£€æŸ¥ä¸€æ¬¡ï¼Œç¬¬å‡ ç§’æ£€æŸ¥ä¸åˆ°ï¼Œå°±æŠ›å‡ºå¼‚å¸¸     
+	    driver.findElement(By.className("video_close")).click();//å…³é—­çª—å£
 	    
-	    driver.findElement(By.xpath("(//*[contains(text(),'·¢ ²¼')])[1]")).click();//Õâ¿é·¢²¼textÖ®¼äÓĞÒ»¸ö¿Õ¸ñµÄ
-	    driver.findElement(By.linkText("ĞÂÑ§Ï°µÄ×÷Òµ3")).click();
+	    driver.findElement(By.xpath("(//*[contains(text(),'å‘ å¸ƒ')])[1]")).click();//è¿™å—å‘å¸ƒtextä¹‹é—´æœ‰ä¸€ä¸ªç©ºæ ¼çš„
+	    driver.findElement(By.linkText("æ–°å­¦ä¹ çš„ä½œä¸š3")).click();
 	    driver.navigate().refresh();
-	    System.out.println("×÷Òµ·¢²¼³É¹¦");
+	    System.out.println("ä½œä¸šå‘å¸ƒæˆåŠŸ");
 	    driver.quit();
   }
 

@@ -12,18 +12,18 @@ import uti.Uti;
 
 public class take_comments implements TestInfo{
 	private static final ChromeDriver driver=new ChromeDriver();
-   //ÎÄÕÂÆÀÂÛºÍÉ¾³ı
+   //æ–‡ç« è¯„è®ºå’Œåˆ é™¤
   @Test(groups = {"Documentation_and_exchange"})
   public void document() throws Exception {
 	    
 	    Uti.ChromeBrowser_setup( driver, "1.44105915053E12", "123123");
-	    driver.findElement(By.partialLinkText("ÎÄÕÂ")).click();
+	    driver.findElement(By.partialLinkText("æ–‡ç« ")).click();
 	    driver.findElement(By.id("tab4")).click();
-	    driver.findElement(By.linkText("ÎÄÕÂ±êÌâ")).click();
-	    System.out.printf("µ±Ç°´°¿ÚÊÇ:"+ driver.getTitle());
+	    driver.findElement(By.linkText("æ–‡ç« æ ‡é¢˜")).click();
+	    System.out.printf("å½“å‰çª—å£æ˜¯:"+ driver.getTitle());
 	    Uti.ChangeWindows(driver, 2);
 	    
-	    System.out.printf("µ±Ç°´°¿ÚÊÇ:"+ driver.getTitle());
+	    System.out.printf("å½“å‰çª—å£æ˜¯:"+ driver.getTitle());
 	    Thread.sleep(1000);
 	    WebElement count = driver.findElement(By.id("viewCount"));
 	    AssertJUnit.assertEquals("1",count.getText());
@@ -38,26 +38,26 @@ public class take_comments implements TestInfo{
 	    driver.findElement(By.className("ke-content")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();
 	    Thread.sleep(1000);
-	    driver.findElement(By.linkText("ÆÀÂÛ")).click();
+	    driver.findElement(By.linkText("è¯„è®º")).click();
 	    WebElement Activity_comments= driver.findElement(By.className("txt"));
 	    AssertJUnit.assertEquals("give,some,comments.please do not take any attention!",Activity_comments.getText());    
 	    //Uti.waitForAlertAndCloseAlert(driver);
-	    driver.findElement(By.linkText("É¾³ı")).click();
+	    driver.findElement(By.linkText("åˆ é™¤")).click();
 	    Uti.waitForAlertAndCloseAlert(driver);
 	    
         WebElement checkcomments= driver.findElement(By.className("fanye"));
-	    Assert.assertEquals("¹² 0 Ìõ¼ÇÂ¼",checkcomments.getText());
+	    Assert.assertEquals("å…± 0 æ¡è®°å½•",checkcomments.getText());
 	    
   }
-  //½»Á÷ÆÀÂÛºÍÉ¾³ı
+  //äº¤æµè¯„è®ºå’Œåˆ é™¤
   @Test(groups = {"Documentation_and_exchange"})
   public void exchange() throws Exception {
 	    ChromeDriver driver=new ChromeDriver();
 	    Uti.ChromeBrowser_setup( driver, "1.44105915053E12", "123123");
-	    driver.findElement(By.partialLinkText("½»Á÷")).click();
+	    driver.findElement(By.partialLinkText("äº¤æµ")).click();
 	    
 	    driver.findElement(By.id("tab6")).click();
-	    driver.findElement(By.linkText("½»Á÷±êÌâ")).click();
+	    driver.findElement(By.linkText("äº¤æµæ ‡é¢˜")).click();
 	    
 	    Uti.ChangeWindows(driver, 2);
 	    WebElement count = driver.findElement(By.id("viewCount"));
@@ -73,13 +73,13 @@ public class take_comments implements TestInfo{
 	    driver.findElement(By.className("ke-content")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();
 	    Thread.sleep(1000);
-	    driver.findElement(By.linkText("ÆÀÂÛ")).click();
+	    driver.findElement(By.linkText("è¯„è®º")).click();
 	    WebElement my_exchange_comments=driver.findElement(By.xpath("(//p[contains(@id,'noesc_context')])[1]"));
 	    AssertJUnit.assertEquals("give,some,comments.please do not take any attention!",my_exchange_comments.getText());
-	    driver.findElement(By.xpath("(//a[contains(text(),'É¾³ı')])[1]")).click();
+	    driver.findElement(By.xpath("(//a[contains(text(),'åˆ é™¤')])[1]")).click();
 	    Uti.waitForAlertAndCloseAlert(driver);
 	    //AssertJUnit.assertEquals("give,some,comments.please do not take any attention!",my_exchange_comments.getText());
-	    System.out.println("ÆÀÂÛÑéÖ¤³É¹¦");
+	    System.out.println("è¯„è®ºéªŒè¯æˆåŠŸ");
 	    driver.quit();
   }
 @Override
