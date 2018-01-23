@@ -24,11 +24,13 @@ public class doc_comments implements TestInfo{
 	  Uti.ChromeBrowser_setup(driver, username, password);
 	  driver.findElement(By.partialLinkText("文章")).click();
 	  driver.findElement(By.id("tab4")).click();
-	  driver.findElement(By.linkText(TitleQueue.pop(this.getClass().getName()))).click();
+	  Thread.sleep(1000);
+	  String s1 = "//div[@class='tab_line']/dl[@class='mark']/dt/a[contains(text(),'测试')]";
+	  driver.findElement(By.xpath(s1)).click();
 
 	    Uti.ChangeWindows(driver, 2);
 	//	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("viewCount")));
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 	    WebElement count = driver.findElement(By.id("viewCount"));
 	    try {
 		    AssertJUnit.assertEquals("1",count.getText());
@@ -42,8 +44,8 @@ public class doc_comments implements TestInfo{
 			// TODO: handle exception
 			System.out.println("文章的浏览数不对");
 		}
-	    driver.switchTo().frame("iframe1");
-	    driver.switchTo().frame(0);
+	    driver.switchTo().frame(driver.findElement(By.id("iframe1")));
+	    driver.switchTo().frame(driver.findElement(By.id("ueditor_0")));
 	    driver.findElement(By.tagName("body")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();
 	    Thread.sleep(1000);
