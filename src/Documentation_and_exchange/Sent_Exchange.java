@@ -18,10 +18,8 @@ public class Sent_Exchange implements TestInfo{
 	    driver.findElement(By.linkText("发布")).click();
 	    driver.findElement(By.id("input_title")).clear();
 	    driver.findElement(By.id("input_title")).sendKeys("交流标题");
-	    driver.switchTo().frame(0);
-	    driver.findElement(By.className("ke-content")).sendKeys("交流内容容");
-	    driver.switchTo().defaultContent();    
-	    Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件	    	
+        Uti.richText(driver, 0, "交流内容");  
+	    Uti.UploadFile(driver, "E:/Downloads/uploadFile.exe","SWFUpload_0");//上传文件	    	
 	    driver.findElement(By.linkText("发 布")).click();
 	    driver.findElement(By.linkText("退出")).click();
 	    System.out.println("交流发布成功");

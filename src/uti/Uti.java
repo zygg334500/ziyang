@@ -16,7 +16,8 @@ public class Uti {
 	private static String current_time;
 	//程序启动并进项目代码
 	public static void ChromeBrowser_setup(WebDriver driver,String username,String password){
-		System.setProperty("webdriver.chrome.driver", "/Program Files (x86)/Google/Chrome/Application/WebDriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/gg/AppData/Local/Google/Chrome/Application/chromedriver.exe");
 	    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	    driver.manage().window().maximize();
 	    
@@ -282,12 +283,10 @@ public class Uti {
 			Thread.sleep(500);
 			new Select(driver.findElement(By.id("sel_sysDictId2"))).selectByValue("8975");  //语文
 			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护学段、学科");
-		}
+	
 		
 		//教材版本
-		try{
+	
 			
 			new Select(driver.findElement(By.id("sel_sysDictId3"))).selectByValue("102469"); //人教版
 			Thread.sleep(500);
@@ -297,22 +296,18 @@ public class Uti {
 			Thread.sleep(500);
 			new Select(driver.findElement(By.id("sel_sysDictId6"))).selectByValue("102477");  //诗两首
 			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护教材版本");
-		}
+	
 		
 		//知识点
-		try{
+		
 			new Select(driver.findElement(By.id("sel_sysDictId8"))).selectByValue("125657");  //六、作文
 			Thread.sleep(500);
 			new Select(driver.findElement(By.id("sel_sysDictId9"))).selectByValue("125659");  //1、命题作文
 			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护知识点");
-		}
+	
 		
 		//资源
-		try{
+	
 			new Select(driver.findElement(By.id("sel_sysDictId11"))).selectByValue("129099");  //学科教学资源
 			Thread.sleep(500);
 			new Select(driver.findElement(By.id("sel_sysDictId7"))).selectByValue("124059");   //导学案
