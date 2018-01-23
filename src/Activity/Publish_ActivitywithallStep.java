@@ -24,7 +24,7 @@ public class  Publish_ActivitywithallStep implements TestInfo{
 		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
 		driver.findElement(By.partialLinkText("活动")).click();//原来是用xpath或者是用linkText，都不如这个好，这个可变性比较好
 		driver.findElement(By.linkText("发布")).click();
-		driver.findElement(By.linkText("自定义")).click();
+		driver.findElement(By.className("zdy")).click();
 		driver.findElement(By.id("activityName")).clear();
 		driver.findElement(By.id("activityName")).sendKeys("奔波儿灞");
 		driver.findElement(By.id("startTime")).click();
@@ -56,17 +56,18 @@ public class  Publish_ActivitywithallStep implements TestInfo{
 		driver.findElement(By.id("name")).clear();
 		driver.findElement(By.id("name")).sendKeys("嘿嘿");
 		driver.findElement(By.linkText("选择工具")).click();
-		driver.findElement(By.id("a3")).click();
-
-		Thread.sleep(3000);
-		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件
-
-		driver.findElement(By.linkText("保存")).click();
-
-		driver.findElement(By.linkText("新增环节")).click();
-		driver.findElement(By.id("name")).clear();
-		driver.findElement(By.id("name")).sendKeys("过的身高大概");
-		driver.findElement(By.linkText("选择工具")).click();
+//		driver.findElement(By.id("a3")).click();
+//
+//		Thread.sleep(3000);
+//		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件
+//
+//		driver.findElement(By.linkText("保存")).click();
+//
+//		driver.findElement(By.linkText("新增环节")).click();
+//		driver.findElement(By.id("name")).clear();
+//		driver.findElement(By.id("name")).sendKeys("过的身高大概");
+//		driver.findElement(By.linkText("选择工具")).click();
+		//没有附件暂时不添加
 		driver.findElement(By.id("a4")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.linkText("保存")).click(); 
@@ -88,24 +89,24 @@ public class  Publish_ActivitywithallStep implements TestInfo{
 		driver.findElement(By.id("name")).sendKeys("手动阀手动阀");
 		driver.findElement(By.linkText("选择工具")).click(); 
 
-		driver.findElement(By.id("a6")).click();
-		Thread.sleep(1000);
-
-		Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//上传视频方法
-
-		Uti.waitForAlertAndCloseAlert(driver);//十秒内强制等待alert框出现，每秒检查一次，第几秒检查不到，就抛出异常
-		driver.findElement(By.className("video_close")).click();//关闭窗口
-		Thread.sleep(3000);
-		driver.findElement(By.linkText("保存")).click();
-		driver.findElement(By.linkText("新增环节")).click();
-		driver.findElement(By.id("name")).clear();
-		driver.findElement(By.id("name")).sendKeys("gdsfewr");
-		driver.findElement(By.linkText("选择工具")).click();
+//		driver.findElement(By.id("a6")).click();
+//		Thread.sleep(1000);
+//
+//		Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//上传视频方法
+//
+//		Uti.waitForAlertAndCloseAlert(driver);//十秒内强制等待alert框出现，每秒检查一次，第几秒检查不到，就抛出异常
+//		driver.findElement(By.className("video_close")).click();//关闭窗口
+//		Thread.sleep(3000);
+//		driver.findElement(By.linkText("保存")).click();
+//		driver.findElement(By.linkText("新增环节")).click();
+//		driver.findElement(By.id("name")).clear();
+//		driver.findElement(By.id("name")).sendKeys("gdsfewr");
+//		driver.findElement(By.linkText("选择工具")).click();
 		driver.findElement(By.id("a7")).click();
-		new Select(driver.findElement(By.id("p_list"))).selectByVisibleText("语文教学计划");
+		new Select(driver.findElement(By.id("p_list"))).selectByIndex(1);
 		new WebDriverWait(driver, 4).until(ExpectedConditions.presenceOfElementLocated(By.id( "c_list" )));
 		//driver.findElement(By.id("c_list")).click();
-		new Select(driver.findElement(By.id("c_list"))).selectByVisibleText("高中语文（Ⅰ）课堂教学中语文思辨能力的培养");
+		new Select(driver.findElement(By.id("c_list"))).selectByIndex(1);
 		driver.findElement(By.linkText("确认")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.linkText("保存")).click();
