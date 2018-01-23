@@ -19,13 +19,11 @@ public class  To_joinActivity implements TestInfo{
 	@Test(groups = {"Activity"},dataProvider = "xueyuanContainsClist",dataProviderClass = DateProvider.class)
 	public void to_joinActivity(String username,String password,String filePath,String vedioPath,String clist) throws Exception {
 		Uti.ChromeBrowser_setup(driver, username, password);
-		//driver.manage().window().maximize();
 		driver.findElement(By.partialLinkText("活动")).click();
 		//driver.findElement(By.id("tab2")).click();
 		Thread.sleep(1000);
-		String title =TitleQueue.pop(this.getClass().getName());
-		//System.out.println(title);
-		driver.findElement(By.linkText(title)).click();   
+		//String title =TitleQueue.pop(this.getClass().getName());
+		driver.findElement(By.linkText("奔波儿灞")).click();   
 		Thread.sleep(1000);
 
 		Uti.ChangeWindows(driver, 2);//2017/6/27修改了页面标签位置
@@ -46,40 +44,40 @@ public class  To_joinActivity implements TestInfo{
 		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[2]")).sendKeys("xuexixuexi");  //写了[],制定索引的序号，查找到任意类型（*代表类型）第二个id包含 pl_con_msg的元素
 		//driver.findElement(By.id("pl_con_msg_43689")).sendKeys("我要提问");
 		driver.findElement(By.cssSelector("#buzhou_div2 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();//根据css定位元素，这很重要，找到最重要的分支点，以#buzhou_div2开始(活动的步骤一)层层剥开
-		driver.findElement(By.cssSelector("#jiadd3 > em")).click();
-		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[3]")).sendKeys("xuexixuexi");
-
-		driver.findElement(By.cssSelector("#buzhou_div3 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
-
-		driver.findElement(By.cssSelector("a.downbtn.r")).click();
-		Uti.ChangeWindows(driver, 2);
-		driver.findElement(By.cssSelector("#jiadd4 > em")).click();//第四步，附件上传
-		Thread.sleep(3000);
-		try {
-			driver.findElement(By.id("SWFUpload_0")).click();
-			driver.findElement(By.id("SWFUpload_0")).click();
-			driver.findElement(By.id("SWFUpload_0")).click();
-			Thread.sleep(2000);
-			Runtime.getRuntime().exec(filePath);
-			WebElement text= driver.findElement(By.className("progressName"));
-			Assert.assertEquals("courseImportnew.xls", text.getText());
-
-		} catch (Exception e) {
-			System.out.println("没上传文件附件");
-			Uti.UploadFile(driver, filePath,"SWFUpload_0");//没有上传文件，再次上传文件
-			// TODO: handle exception
-		}
-		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("#jiadd5 > em")).click();
+//		driver.findElement(By.cssSelector("#jiadd3 > em")).click();
+//		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[3]")).sendKeys("xuexixuexi");
+//
+//		driver.findElement(By.cssSelector("#buzhou_div3 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
+//
+//		driver.findElement(By.cssSelector("a.downbtn.r")).click();
+//		Uti.ChangeWindows(driver, 2);
+//		driver.findElement(By.cssSelector("#jiadd4 > em")).click();//第四步，附件上传
+//		Thread.sleep(3000);
+//		try {
+//			driver.findElement(By.id("SWFUpload_0")).click();
+//			driver.findElement(By.id("SWFUpload_0")).click();
+//			driver.findElement(By.id("SWFUpload_0")).click();
+//			Thread.sleep(2000);
+//			Runtime.getRuntime().exec(filePath);
+//			WebElement text= driver.findElement(By.className("progressName"));
+//			Assert.assertEquals("courseImportnew.xls", text.getText());
+//
+//		} catch (Exception e) {
+//			System.out.println("没上传文件附件");
+//			Uti.UploadFile(driver, filePath,"SWFUpload_0");//没有上传文件，再次上传文件
+//			// TODO: handle exception
+//		}
+//		Thread.sleep(3000);
+		driver.findElement(By.cssSelector("#jiadd4 > em")).click();
 		driver.findElement(By.xpath("(//textarea[contains(@id, 'zhengfang')])[1]")).sendKeys("xuexixuexi");    //意思相同，查找第一个id包含zhengfang字符串的元素，也就是输入框，这个zhengfangid是动态叠加的，每次都变不好计算。
 		driver.findElement(By.cssSelector("input.btn")).click();
 		driver.findElement(By.xpath("(//textarea[contains(@id, 'fanfang')])[1]")).sendKeys("xuexixuexi");    
-		driver.findElement(By.xpath("(//input[@name=''])[10]")).click();
-		driver.findElement(By.cssSelector("#jiadd6 > em")).click();
-		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[4]")).sendKeys("xuexixuexi");
-		//driver.findElement(By.id("pl_con_msg_43697")).sendKeys("看了下视频呃呃呃");
-		driver.findElement(By.cssSelector("#buzhou_div6 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
-		driver.findElement(By.cssSelector("#jiadd7 > em")).click();
+		driver.findElement(By.xpath("(//input[@name='' and value='提交我的观点'])[2]")).click();
+//		driver.findElement(By.cssSelector("#jiadd6 > em")).click();
+//		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[4]")).sendKeys("xuexixuexi");
+//		//driver.findElement(By.id("pl_con_msg_43697")).sendKeys("看了下视频呃呃呃");
+//		driver.findElement(By.cssSelector("#buzhou_div6 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
+		driver.findElement(By.cssSelector("#jiadd5 > em")).click();
 		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[5]")).sendKeys("xuexixuexi");
 		driver.findElement(By.cssSelector("#buzhou_div7 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
 		Thread.sleep(3000);
@@ -90,7 +88,7 @@ public class  To_joinActivity implements TestInfo{
 		Uti.ChangeWindows(driver,2);
 		//Thread.sleep(1000);
 		//driver.findElement(By.cssSelector("#buzhou_div7 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
-		driver.findElement(By.cssSelector("#jiadd8 > em")).click();
+		driver.findElement(By.cssSelector("#jiadd6 > em")).click();
 		Thread.sleep(2000);
 		try {
 			Uti.UploadFile(driver, filePath,"SWFUpload_1");//上传文件

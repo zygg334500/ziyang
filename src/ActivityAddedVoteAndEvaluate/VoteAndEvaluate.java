@@ -34,9 +34,11 @@ public class VoteAndEvaluate {
 		driver.findElementById("endtime").sendKeys("2019-12-31");
 		
 		//输入活动简介，保存到下一步
-		driver.switchTo().frame(0);
-		driver.findElementByClassName("ke-content").sendKeys("这是活动的简介。。"+Uti.get_random());
-		driver.switchTo().defaultContent();
+        Uti.richText(driver, 0, "这是活动的简介。。");
+//		driver.switchTo().frame(0);
+//		driver.findElementByClassName("ke-content").sendKeys("这是活动的简介。。"+Uti.get_random());
+//		driver.switchTo().defaultContent();
+        
 		driver.findElementByLinkText("保存到下一步").click();
 		Thread.sleep(1000);
 		
@@ -45,9 +47,10 @@ public class VoteAndEvaluate {
 		Thread.sleep(1000);
 		driver.findElementById("name").sendKeys("步骤1投票");
 		
-		driver.switchTo().frame(0);
-		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
-		driver.switchTo().defaultContent();
+		Uti.richText(driver, 0, "这是步骤描述");
+//		driver.switchTo().frame(0);
+//		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
+//		driver.switchTo().defaultContent();
 		
 		driver.findElementByLinkText("选择工具").click();
 		driver.findElementById("a10").click();
@@ -68,9 +71,10 @@ public class VoteAndEvaluate {
 		Thread.sleep(1000);
 		driver.findElementById("name").sendKeys("步骤2多选投票");
 		
-		driver.switchTo().frame(0);
-		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
-		driver.switchTo().defaultContent();
+		Uti.richText(driver, 0, "这里是步骤描述");
+//		driver.switchTo().frame(0);
+//		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
+//		driver.switchTo().defaultContent();
 		
 		driver.findElementByLinkText("选择工具").click();
 		driver.findElementById("a10").click();
@@ -95,10 +99,11 @@ public class VoteAndEvaluate {
 		driver.findElementByLinkText("新增环节").click();
 		Thread.sleep(1000);
 		driver.findElementById("name").sendKeys("步骤3活动评价");
-		
-		driver.switchTo().frame(0);
-		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
-		driver.switchTo().defaultContent();
+		Uti.richText(driver, 0, "这里是步骤描述"+Uti.get_random());
+//		
+//		driver.switchTo().frame(0);
+//		driver.findElementByClassName("ke-content").sendKeys("这是步骤的描述。。"+Uti.get_random());
+//		driver.switchTo().defaultContent();
 		
 		driver.findElementByLinkText("选择工具").click();
 		driver.findElementById("a11").click();
@@ -110,7 +115,7 @@ public class VoteAndEvaluate {
 		driver.findElementByLinkText("发布").click();
 		driver.findElementByLinkText("退出").click();
 
-		joinActivity(driver,"devstudent1","123123");
+		joinActivity(driver,"devstudent3","123123");
 		scoreActivity(driver,"devteacher","3edc$RFV");
 
 		driver.quit();
