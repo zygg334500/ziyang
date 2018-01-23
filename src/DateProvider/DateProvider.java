@@ -16,13 +16,13 @@ public class DateProvider {
 	public static String teacherUsername="devteacher";
 	public static String teacherPassword="3edc$RFV";
 	public static String student1Username="devstudent1";
-	public static String student1Password="123123";
+	public static String student1Password="123123790a";
 	public static String student2Username="devstudent2";
-	public static String student2Password="123123";
+	public static String student2Password="123123790a";
 	public static String filePath="C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe";
 	public static String vedioPath="C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe";
 	public static String coursePlan="高中语文教学计划2";
-	public static String couresName="高中套餐123选修课13";
+	public static String couresName="T2教学与信息化技术手段";
 
 @DataProvider(name = "publishAccount_account")
 
@@ -136,7 +136,7 @@ new Object[]{student2Username,student2Password,filePath,vedioPath}
 public static Object[][] filepath55() {
 	
 return new Object[][] { 
-new Object[]{student1Username,student1Password,filePath,vedioPath,couresName}		
+new Object[]{student2Username,student2Password,filePath,vedioPath,couresName}		
 };
 }
 @DataProvider(name = "zhuanjiaFilePath")
