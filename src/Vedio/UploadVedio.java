@@ -1,12 +1,7 @@
 package Vedio;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -19,9 +14,10 @@ public class UploadVedio {
 	  @Test(groups = {"vedio"},dataProvider = "teacherFilePath",dataProviderClass = DateProvider.class)
     public void upVedio(String username,String password,String filePath,String vedioPath) throws Exception {
 	    
-		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
-	    Uti.ChromeBrowser_setup(driver, username, password);
+		//DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  		
+		ChromeDriver driver = new ChromeDriver();
+		Uti.ChromeBrowser_setup(driver, username, password);
 	    driver.findElement(By.partialLinkText("视频")).click();
 	    driver.findElement(By.id("upload_pop")).click();
 	    Thread.sleep(1000);
