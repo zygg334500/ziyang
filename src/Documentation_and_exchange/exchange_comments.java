@@ -49,8 +49,8 @@ public class exchange_comments implements TestInfo{
 			System.out.println("交流的浏览数不对");
 			// TODO: handle exception
 		}
-        driver.switchTo().frame("iframe1");
-        driver.switchTo().frame(0);
+	    driver.switchTo().frame(driver.findElement(By.id("iframe1")));
+	    driver.switchTo().frame(driver.findElement(By.id("ueditor_0")));
         
 	    driver.findElement(By.tagName("body")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();

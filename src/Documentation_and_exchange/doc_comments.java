@@ -25,8 +25,8 @@ public class doc_comments implements TestInfo{
 	  driver.findElement(By.partialLinkText("文章")).click();
 	  driver.findElement(By.id("tab4")).click();
 	  Thread.sleep(1000);
-	  String s1 = "//div[@class='tab_line']/dl[@class='mark']/dt/a[contains(text(),'测试')]";
-	  driver.findElement(By.xpath(s1)).click();
+	  driver.findElement(By.linkText("测试")).click();
+	  Thread.sleep(2000);
 
 	    Uti.ChangeWindows(driver, 2);
 	//	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("viewCount")));
@@ -56,8 +56,6 @@ public class doc_comments implements TestInfo{
 	    driver.findElement(By.linkText("删除")).click();
 	    Uti.waitForAlertAndCloseAlert(driver);
 	    
-        WebElement checkcomments= driver.findElement(By.className("fanye"));
-	    Assert.assertEquals("共 0 条记录",checkcomments.getText());
 	    driver.quit();
   }
   
