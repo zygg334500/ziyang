@@ -17,12 +17,11 @@ public class Publish_Task {
 		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
 	    driver.findElement(By.partialLinkText("作业")).click();
 	    driver.findElement(By.linkText("发布")).click();
+
 	    new Select(driver.findElement(By.id("p_list"))).selectByIndex(2);;//根据顺序2，选择下拉列表中的语文教学计划
   	    String taskTitle=Uti.get_zuoyeName();//生成作业标题
   	    TitleQueue.push(taskTitle,this.getClass().getName(),"task.Submit_Task");//将作业标题放入全局队列，以便制定的类可以接收
 	    driver.findElement(By.id("input_title")).sendKeys(taskTitle);
-	    Thread.sleep(1000);
-        driver.findElement(By.id("endtime")).click();
         Thread.sleep(1000);   
         JavascriptExecutor removeAttribute = (JavascriptExecutor)driver;  
         //remove readonly attribute

@@ -19,10 +19,10 @@ public class DateProvider {
 	public static String student1Password="123123";
 	public static String student2Username="devstudent2";
 	public static String student2Password="123123";
-	public static String student3Username="devstudent3";
-	public static String student3Password="123123";
 	public static String filePath="E:/Downloads/uploadFile.exe";
 	public static String vedioPath="E:/Downloads/uploadvedio.exe";
+	public static String student3Username="devstudent3";
+	public static String student3Password="123123";
 	public static String coursePlan="高中语文教学计划2";
 	public static String couresName="T2教学与信息化技术手段";
 
@@ -33,7 +33,6 @@ return new Object[][] {
 		
 new Object[] { "xmgly", "123123" },
 new Object[] { "wowo", "w123123"}
-//new Object[] { "zgcsb", "123123"}
 
 };
 }
