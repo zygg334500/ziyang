@@ -20,7 +20,7 @@ public class DateProvider {
 	public static String student2Username="devstudent2";
 	public static String student2Password="123123790a";
 	public static String filePath="E:/Downloads/uploadFile.exe";
-	public static String vedioPath="E:/Downloads/uploadvideo.exe";
+	public static String vedioPath="E:/Downloads/uploadvedio.exe";
 	public static String coursePlan="高中语文教学计划2";
 	public static String couresName="T2教学与信息化技术手段";
 
