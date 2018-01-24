@@ -25,8 +25,7 @@ public class Report {
 		driver.findElement(By.linkText("提交")).click();
 		Thread.sleep(1000);
 		driver.switchTo().alert().accept();
-		
-		
+				
 	}
 	
 }

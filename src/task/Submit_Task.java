@@ -31,9 +31,9 @@ public class Submit_Task implements TestInfo{
         
         Uti.richText(driver,0,"老师好啊，我发布了作业内容，请查看附件!");
         
-        Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");//上传文件
+        Uti.UploadFile(driver, "E:/Downloads/uploadFile.exe","SWFUpload_0");//上传文件
         try {
-        	Uti.UploadVedio(driver,"C:/Program Files (x86)/Mozilla Firefox/uploadVideo.exe");//上传视频方法
+        	Uti.UploadVedio(driver,"E:/Downloads/uploadVideo.exe");//上传视频方法
 		} catch (Exception e) {
 		}finally{
         Uti.waitForAlertAndCloseAlert(driver);
