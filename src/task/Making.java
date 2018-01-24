@@ -11,7 +11,7 @@ public class Making implements TestInfo{
 	private static final ChromeDriver driver=new ChromeDriver();
       @Test(groups = {"task"})
   public void making() throws Exception {
-		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
+		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
 	    
 	    driver.findElement(By.partialLinkText("作业")).click();
 
