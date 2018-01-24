@@ -17,7 +17,6 @@ public class Uti {
 	//程序启动并进项目代码
 	public static void ChromeBrowser_setup(WebDriver driver,String username,String password){
 		
-		System.setProperty("webdriver.chrome.driver", "C:/Users/gg/AppData/Local/Google/Chrome/Application/chromedriver.exe");
 	    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	    driver.manage().window().maximize();
 	    

@@ -18,7 +18,7 @@ public class DateProvider {
 	public static String student1Username="devstudent1";
 	public static String student1Password="123123";
 	public static String student2Username="devstudent2";
-	public static String student2Password="123123790a";
+	public static String student2Password="123123";
 	public static String filePath="E:/Downloads/uploadFile.exe";
 	public static String vedioPath="E:/Downloads/uploadvedio.exe";
 	public static String student3Username="devstudent3";

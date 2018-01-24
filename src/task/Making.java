@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import Interface.TestInfo;
 import uti.Uti;
 
 public class Making{

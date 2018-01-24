@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Suite1">
-    <test name="test12">
-        <classes>
-            <class name="task.Publish_Task" />
-            <class name="task.Submit_Task" />    
-            <class name="task.Submit_Task2" /> 
-            <class name="task.Submit_Task3" /> 
-            <class name="task.Making" />
-            <class name="task.CheckingData" />
-        </classes>
-    </test>
+	<test name="test12">
+		<classes>
+			<class name="task.Publish_Task" />
+			<class name="task.Submit_Task" />
+			<class name="task.Submit_Task2" />
+			<class name="task.Submit_Task3" />
+			<class name="task.Making" />
+		</classes>
+	</test>
 </suite>
 
