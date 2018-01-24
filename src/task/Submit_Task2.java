@@ -20,14 +20,15 @@ import uti.Uti;
 public class Submit_Task2 {
 
   
-  @Test(groups = {"task"},dataProvider = "xueyuan2withfilePath",dataProviderClass = DateProvider.class)
-  public void submit_Task(String username,String password,String filePath) throws Exception {
+  @Test(groups = {"task"},dataProvider = "xueyuan2FilePath",dataProviderClass = DateProvider.class)
+  public void submit_Task(String username,String password,String filePath,String vedioPath) throws Exception {
 	    //DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
 	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	 
 	    ChromeDriver driver=new ChromeDriver();
 	    Uti.ChromeBrowser_setup(driver, username, password);
 	    
-	    driver.findElement(By.partialLinkText("作业")).click();
+	    driver.findElement(By.linkText("作业")).click();
+	    Thread.sleep(1000);
         driver.findElement(By.id("tab3")).click();
         Thread.sleep(2000);
         try {

@@ -9,13 +9,12 @@ import Interface.TestInfo;
 import Interface.TitleQueue;
 import uti.Uti;
 
-public class Publish_Task implements TestInfo{
-	private static final ChromeDriver driver=new ChromeDriver();
+public class Publish_Task {
+	
 	  @Test(groups = {"task"})
     public void publish_Task() throws Exception {
-		
+		ChromeDriver driver=new ChromeDriver();
 		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
-		
 	    driver.findElement(By.partialLinkText("作业")).click();
 	    driver.findElement(By.linkText("发布")).click();
 	    new Select(driver.findElement(By.id("p_list"))).selectByIndex(2);;//根据顺序2，选择下拉列表中的语文教学计划
@@ -46,9 +45,5 @@ public class Publish_Task implements TestInfo{
 	    driver.quit();
   }
 
-@Override
-public ChromeDriver getDriver() {
-	// TODO Auto-generated method stub
-	return driver;
-}
+
 }

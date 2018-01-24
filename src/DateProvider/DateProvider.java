@@ -16,9 +16,11 @@ public class DateProvider {
 	public static String teacherUsername="devteacher";
 	public static String teacherPassword="3edc$RFV";
 	public static String student1Username="devstudent1";
-	public static String student1Password="123123790a";
+	public static String student1Password="123123";
 	public static String student2Username="devstudent2";
-	public static String student2Password="123123790a";
+	public static String student2Password="123123";
+	public static String student3Username="devstudent3";
+	public static String student3Password="123123";
 	public static String filePath="E:/Downloads/uploadFile.exe";
 	public static String vedioPath="E:/Downloads/uploadvedio.exe";
 	public static String coursePlan="高中语文教学计划2";
@@ -128,7 +130,23 @@ new Object[]{teacherUsername,teacherPassword,filePath,vedioPath,coursePlan,coure
 public static Object[][] filepath1() {
 	
 return new Object[][] { 
+new Object[]{student1Username,student1Password,filePath,vedioPath}		
+};
+}
+@DataProvider(name = "xueyuan2FilePath")
+
+public static Object[][] filepath234() {
+	
+return new Object[][] { 
 new Object[]{student2Username,student2Password,filePath,vedioPath}		
+};
+}
+@DataProvider(name = "xueyuan3FilePath")
+
+public static Object[][] filepath321() {
+	
+return new Object[][] { 
+new Object[]{student3Username,student3Password,filePath,vedioPath}		
 };
 }
 @DataProvider(name = "xueyuanContainsClist")
