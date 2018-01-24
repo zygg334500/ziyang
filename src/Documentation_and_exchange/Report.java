@@ -21,9 +21,7 @@ public class Report {
 		String xpath_selector = "//input[@type='radio'][@value='5']";
 		driver.findElement(By.xpath(xpath_selector)).click();
 		
-		driver.switchTo().frame(0);
-		driver.findElement(By.className("ke-content")).sendKeys("举报内容"+Uti.get_random());
-		driver.switchTo().defaultContent();		
+		Uti.richText(driver,0,"举报内容"+Uti.get_random());
 		driver.findElement(By.linkText("提交")).click();
 		Thread.sleep(1000);
 		driver.switchTo().alert().accept();
