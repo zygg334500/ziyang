@@ -7,7 +7,6 @@
             <class name="task.Submit_Task2" /> 
             <class name="task.Submit_Task3" /> 
             <class name="task.Making" />
-            <class name="task.CheckingData" />
         </classes>
     </test>
 </suite>
