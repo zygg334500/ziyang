@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import Interface.TestInfo;
-
+import Interface.TitleQueue;
 import uti.Uti;
 
 public class Publish_Task implements TestInfo{
@@ -14,14 +14,15 @@ public class Publish_Task implements TestInfo{
 	  @Test(groups = {"task"})
     public void publish_Task() throws Exception {
 		
-		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
+		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
 		
 	    driver.findElement(By.partialLinkText("作业")).click();
 	    driver.findElement(By.linkText("发布")).click();
-	    new Select(driver.findElement(By.id("p_list"))).selectByVisibleText("初中语文教学计划");//选择下拉列表中的语文教学计划
-        driver.findElement(By.id("input_title")).sendKeys("新学习的作业3");
-	    Thread.sleep(1000);
-        driver.findElement(By.id("endtime")).click();
+
+	    new Select(driver.findElement(By.id("p_list"))).selectByIndex(2);;//根据顺序2，选择下拉列表中的语文教学计划
+  	    String taskTitle=Uti.get_zuoyeName();//生成作业标题
+  	    TitleQueue.push(taskTitle,this.getClass().getName(),"task.Submit_Task");//将作业标题放入全局队列，以便制定的类可以接收
+	    driver.findElement(By.id("input_title")).sendKeys(taskTitle);
         Thread.sleep(1000);   
         JavascriptExecutor removeAttribute = (JavascriptExecutor)driver;  
         //remove readonly attribute
@@ -38,7 +39,7 @@ public class Publish_Task implements TestInfo{
 	    driver.findElement(By.className("video_close")).click();//关闭窗口
 	    
 	    driver.findElement(By.xpath("(//*[contains(text(),'发 布')])[1]")).click();//这块发布text之间有一个空格的
-	    driver.findElement(By.linkText("新学习的作业3")).click();
+	    driver.findElement(By.linkText(taskTitle)).click();
 	    driver.navigate().refresh();
 	    System.out.println("作业发布成功");
 	    driver.quit();

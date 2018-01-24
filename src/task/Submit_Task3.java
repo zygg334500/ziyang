@@ -22,9 +22,9 @@ public class Submit_Task3{
   
   @Test(groups = {"task"},dataProvider = "xueyuan3withvedioPath",dataProviderClass = DateProvider.class)
   public void submit_Task(String username,String password,String vedioPath) throws Exception {
-	    DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-	    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	    Uti.ChromeBrowser_setup(driver, username, password);
-	    
+	    //DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+	    //WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	    Uti.ChromeBrowser_setup(driver, username, password);
+	    ChromeDriver driver=new ChromeDriver();
 	    driver.findElement(By.partialLinkText("作业")).click();
         driver.findElement(By.id("tab3")).click();
         Thread.sleep(2000);
@@ -36,6 +36,8 @@ public class Submit_Task3{
         driver.findElement(By.linkText("提交")).click();  
         Thread.sleep(2000);
         Uti.richText(driver,0,"老师好啊，我发布了作业内容，请查看附件!");
+
+        Uti.richText(driver,1,"老师好啊，我发布了作业内容，请查看附件!");
         try {
         	Uti.UploadVedio(driver,vedioPath);//上传视频方法
 		} catch (Exception e) {
