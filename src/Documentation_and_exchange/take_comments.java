@@ -16,7 +16,7 @@ public class take_comments implements TestInfo{
   @Test(groups = {"Documentation_and_exchange"})
   public void document() throws Exception {
 	    
-	    Uti.ChromeBrowser_setup( driver, "1.44105915053E12", "123123");
+	    Uti.ChromeBrowser_setup( driver, "devstudent3", "123123");
 	    driver.findElement(By.partialLinkText("文章")).click();
 	    driver.findElement(By.id("tab4")).click();
 	    driver.findElement(By.linkText("文章标题")).click();
@@ -35,7 +35,7 @@ public class take_comments implements TestInfo{
         
 	    driver.switchTo().frame("iframe1");
 	    driver.switchTo().frame(0);
-	    driver.findElement(By.className("ke-content")).sendKeys("give,some,comments.please do not take any attention!");	    
+	    driver.findElement(By.tagName("body")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();
 	    Thread.sleep(1000);
 	    driver.findElement(By.linkText("评论")).click();
@@ -53,7 +53,7 @@ public class take_comments implements TestInfo{
   @Test(groups = {"Documentation_and_exchange"})
   public void exchange() throws Exception {
 	    ChromeDriver driver=new ChromeDriver();
-	    Uti.ChromeBrowser_setup( driver, "1.44105915053E12", "123123");
+	    Uti.ChromeBrowser_setup( driver, "devstudent3", "123123");
 	    driver.findElement(By.partialLinkText("交流")).click();
 	    
 	    driver.findElement(By.id("tab6")).click();
@@ -70,7 +70,7 @@ public class take_comments implements TestInfo{
         driver.switchTo().frame("iframe1");
         driver.switchTo().frame(0);
         
-	    driver.findElement(By.className("ke-content")).sendKeys("give,some,comments.please do not take any attention!");	    
+	    driver.findElement(By.tagName("body")).sendKeys("give,some,comments.please do not take any attention!");	    
 	    driver.switchTo().parentFrame();
 	    Thread.sleep(1000);
 	    driver.findElement(By.linkText("评论")).click();

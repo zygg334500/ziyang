@@ -13,7 +13,7 @@ public class Sent_Exchange implements TestInfo{
   @Test(groups = {"Documentation_and_exchange"})
   public void sent_exchange() throws Exception {
 	    
-	    Uti.ChromeBrowser_setup( driver, "xmgly", "123123");
+	    Uti.ChromeBrowser_setup( driver, "devguanliyuan", "3edc$RFV");
 	    driver.findElement(By.partialLinkText("交流")).click();
 	    driver.findElement(By.linkText("发布")).click();
 	    driver.findElement(By.id("input_title")).clear();
