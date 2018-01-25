@@ -20,9 +20,10 @@ public class Gejigonggao{
 
 	@Test(groups = {"Activity"},dataProvider = "guanliyuanFilePath",dataProviderClass = DateProvider.class)
 	public void publish_activity(String username,String password,String filePath,String vedioPath) throws Exception {	
-		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  
+//		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+//		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  
 
+		ChromeDriver driver = new ChromeDriver();
 		Uti.ChromeBrowser_setup(driver, username, password); 
 
 		driver.findElement(By.partialLinkText("公告")).click();
@@ -52,5 +53,6 @@ public class Gejigonggao{
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("确定")).click();
 		Thread.sleep(2000);
+		driver.quit();
 	}
 }

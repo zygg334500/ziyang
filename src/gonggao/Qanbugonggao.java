@@ -21,8 +21,9 @@ public class  Qanbugonggao{
 
 	@Test(groups = {"Activity"},dataProvider = "guanliyuanFilePath",dataProviderClass = DateProvider.class)
 	public  void publish_activity(String username,String password,String filePath,String vedioPath) throws Exception {	
-		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
-		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  
+//		DesiredCapabilities chromeDesiredcap = DesiredCapabilities.chrome();  
+//		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeDesiredcap);  	  
+		ChromeDriver driver = new ChromeDriver();
 		Uti.ChromeBrowser_setup(driver, username, password); 
 		driver.findElement(By.partialLinkText("公告")).click();
 		Thread.sleep(1000); 
@@ -55,5 +56,6 @@ public class  Qanbugonggao{
 		driver.findElement(By.id("link")).click();
 		driver.findElement(By.id("link_content")).sendKeys("https://www.baidu.com/");
 		driver.findElement(By.linkText("保存为草稿")).click();
+		driver.quit();
 	}
 }
