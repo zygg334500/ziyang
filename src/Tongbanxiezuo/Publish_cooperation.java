@@ -64,8 +64,9 @@ public class Publish_cooperation implements TestInfo {
 		  driver.findElement(By.id("stepContent3")).sendKeys("步骤的部分内容啊手动阀手动阀士大夫我亲耳");
 		  driver.findElement(By.linkText("选择工具")).click();
 		  driver.findElement(By.id("a3")).click();
+		  Thread.sleep(1000);
 		  Uti.UploadFile(driver, filePath, "SWFUpload_2");
-		  Thread.sleep(3000);
+		  Thread.sleep(1000);
 		  
 		  driver.findElement(By.className("add")).click();
 		  driver.findElement(By.id("stepName4")).sendKeys("步骤四标题");
@@ -86,8 +87,8 @@ public class Publish_cooperation implements TestInfo {
 		  driver.findElement(By.id("stepContent6")).sendKeys("步骤的部分内容啊手动阀手动阀士大夫我亲耳");
 		  driver.findElement(By.linkText("选择工具")).click();
 		  driver.findElement(By.id("a6")).click();
-		  
-		  
+		  Thread.sleep(1000);
+	
 		  try {
 			  Uti.UploadVedio(driver, vedioPath);
 			  Uti.waitForAlertAndCloseAlert(driver);
@@ -105,7 +106,7 @@ public class Publish_cooperation implements TestInfo {
 		  driver.findElement(By.linkText("选择工具")).click();
 		  driver.findElement(By.id("a7")).click();
 		  
-		  new Select(driver.findElement(By.id("p_list"))).selectByVisibleText(plist);
+		  new Select(driver.findElement(By.id("p_list"))).selectByIndex(1);
 		  new WebDriverWait(driver, 4).until(ExpectedConditions.presenceOfElementLocated(By.id( "c_list" )));
 		  Thread.sleep(2000);
 		  driver.findElement(By.id("c_list")).click();
