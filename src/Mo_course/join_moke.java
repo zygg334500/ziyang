@@ -12,7 +12,7 @@ public class join_moke implements TestInfo{
 	private static final ChromeDriver driver=new ChromeDriver();
 @Test(groups = {"Mo_course"})
   public void addtomoke() throws Exception {
-		Uti.ChromeBrowser_setup(driver, "1.44105915053E12", "123123");
+		Uti.ChromeBrowser_setup(driver, "devstudent3", "123123");
 		
 		driver.findElement(By.partialLinkText("磨课")).click();
 		driver.findElement(By.id("tab4")).click();		

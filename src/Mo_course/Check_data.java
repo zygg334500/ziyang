@@ -15,7 +15,7 @@ public class Check_data implements TestInfo{
   public void check_data() throws Exception {
 	  
 		
-		Uti.ChromeBrowser_setup(driver, "suke", "123123");
+		Uti.ChromeBrowser_setup(driver, "devteacher", "3edc$RFV");
 		
 		driver.findElement(By.partialLinkText("磨课")).click();
 		driver.findElement(By.id("tab1")).click();
