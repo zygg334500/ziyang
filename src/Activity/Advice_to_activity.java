@@ -15,8 +15,7 @@ public class  Advice_to_activity implements TestInfo{
 	@Test(groups = {"Activity"})
 	public void advice_to_activity() throws Exception {
 
-		Uti.ChromeBrowser_setup(driver, "xmgly", "123123");
-		//driver.manage().window().maximize();
+		Uti.ChromeBrowser_setup(driver, "devguanliyuan", "3edc$RFV");
 		driver.findElement(By.partialLinkText("活动")).click();//原来是用xpath或者是用linkText，都不如这个好，这个可变性比较好
 		driver.findElement(By.linkText("提交详情")).click();
 		driver.findElement(By.xpath("(//a[contains(text(),'未批阅')])")).click();
