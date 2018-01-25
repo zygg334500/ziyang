@@ -13,13 +13,13 @@ public class KeguantiDeleteTest implements TestInfo {
 	  private static final ChromeDriver driver=new ChromeDriver();
 	  private String title;
 	  private String keguantiTitle;
-	  @Test(dataProvider = "zhuanjiaCotainsPlist",dataProviderClass = DateProvider.class)
-public void keguantiDeleteTest(String username,String password,String filePath,String vedioPath,String plist) throws Exception {
+	  @Test(dataProvider = "zhuanjiaFilePath",dataProviderClass = DateProvider.class)
+public void keguantiDeleteTest(String username,String password,String filePath,String vedioPath) throws Exception {
 		  Uti.ChromeBrowser_setup(driver, username, password);
 		  driver.findElement(By.partialLinkText("客观题")).click();//原来是用xpath或者是用linkText，都不如这个好，这个可变性比较好
 		  driver.findElement(By.linkText("发布")).click();
 		  driver.findElement(By.id("ajh")).click();
-		 new Select(driver.findElement(By.id("p_list"))).selectByVisibleText(plist);
+		 new Select(driver.findElement(By.id("p_list"))).selectByIndex(1);;
 		  
 		  keguantiTitle =Uti.get_docName();
 		  driver.findElement(By.id("input_title")).sendKeys(keguantiTitle);
