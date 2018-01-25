@@ -43,7 +43,7 @@ public class Publish_moke implements TestInfo{
 		driver.findElement(By.xpath("//li[@id='0'][text()='板书设计']")).click();
 		Uti.richText(driver,4,"板书设计内容");
 		
-		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
+//		Uti.UploadFile(driver, "C:/Program Files (x86)/Mozilla Firefox/uploadFile.exe","SWFUpload_0");
 		driver.findElement(By.linkText("发布")).click();
 	    System.out.println("磨课发布成功");
 	    
