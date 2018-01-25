@@ -11,29 +11,7 @@ import uti.Uti;
 import DateProvider.DateProvider;
 
 public class EditAndDeleteSource {
-	
-	//以加载个人配置的方式实例化Chrome的方法，适用于61及以后版本flash无法上传的情况，但多线程执行时会出现问题
-	public static ChromeDriver createDriver(){
-		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=C:/Users/Administrator/AppData/Local/Google/Chrome/User Data");
-		ChromeDriver driver = new ChromeDriver(options);
-		return driver;
-		
-	}
-	
-	//用于判断资源是否成功修改的方法
-	public boolean isSuccess(String text){
-		
-		try{
-			driver.findElementByPartialLinkText(text);
-			return true;
-		}catch (Exception e){
-			return false;
-		}
-		
-	}
-	
+
 //	public final ChromeDriver driver = createDriver();
 	public final ChromeDriver driver = new ChromeDriver();
 	
@@ -122,4 +100,27 @@ public class EditAndDeleteSource {
 		  driver.quit();
 	}
 
+	
+	//以加载个人配置的方式实例化Chrome的方法，适用于61及以后版本flash无法上传的情况，但多线程执行时会出现问题
+	public static ChromeDriver createDriver(){
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("user-data-dir=C:/Users/Administrator/AppData/Local/Google/Chrome/User Data");
+		ChromeDriver driver = new ChromeDriver(options);
+		return driver;
+		
+	}
+	
+	//用于判断资源是否成功修改的方法
+	public boolean isSuccess(String text){
+		
+		try{
+			driver.findElementByPartialLinkText(text);
+			return true;
+		}catch (Exception e){
+			return false;
+		}
+		
+	}
+	
 }
