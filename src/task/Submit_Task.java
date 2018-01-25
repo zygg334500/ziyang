@@ -14,9 +14,9 @@ import Interface.TitleQueue;
 import uti.Uti;
 
 public class Submit_Task{
- 
-  @Test(groups = {"task"},dataProvider = "xueyuanFilePath",dataProviderClass = DateProvider.class)
-  public void submit_Task(String username,String password,String filePath,String vedioPath) throws Exception {
+
+@Test(groups = {"task"},dataProvider = "xueyuanFilePath",dataProviderClass = DateProvider.class)
+public void submit_Task(String username,String password,String filePath,String vedioPath) throws Exception {
 		 ChromeDriver driver=new ChromeDriver();
 
 		Uti.ChromeBrowser_setup(driver, username, password);
