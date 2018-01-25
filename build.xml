@@ -37,7 +37,7 @@
 </path>  
   
     <target name="runtest" depends="compile">  
-        <testng outputdir="${testoutputdir}" classpathref="classes" delegateCommandSystemProperties="true">  
+        <testng outputdir="${test-outputdir}" classpathref="classes" delegateCommandSystemProperties="true">  
             <xmlfileset dir="${srcdir}" includes="testng.xml" />  
         </testng>  
     </target>  
