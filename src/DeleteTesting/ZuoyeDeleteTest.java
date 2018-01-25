@@ -31,7 +31,7 @@ public class ZuoyeDeleteTest implements TestInfo {
 	        removeAttribute.executeScript("var setDate=document.getElementById(\"endtime\");setDate.removeAttribute('readonly');") ;
 		  driver.findElement(By.name("endtime")).sendKeys(Uti.get_currenttime());
 		  
-		  Uti.richText(driver,0,"活动内容");
+		  Uti.richText(driver,0,"作业内容");
 		  
 		  try {
 			  Uti.UploadFile(driver, filePath, "SWFUpload_0");
@@ -42,8 +42,11 @@ public class ZuoyeDeleteTest implements TestInfo {
 		}
 		  Uti.waitForAlertAndCloseAlert(driver);
 		  driver.findElement(By.className("video_close")).click();
-		  driver.findElement(By.linkText("预览")).click();	  
-		  driver.findElement(By.className("ke-dialog-icon-close")).click();
+		  driver.findElement(By.linkText("预览")).click();
+		  Uti.ChangeWindows(driver, 2);
+		  driver.close();
+		  Uti.ChangeWindows(driver, 1);
+//		  driver.findElement(By.className("ke-dialog-icon-close")).click();
 		  driver.findElement(By.linkText("保存为草稿")).click();
 		  driver.findElement(By.id("tab1")).click();
 		  Assert.assertEquals(false,isTextPresent(zuoyeTitle));
