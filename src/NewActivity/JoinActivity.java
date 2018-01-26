@@ -28,12 +28,21 @@ public class JoinActivity implements TestInfo{
 			System.out.println("没有弹出框");
 			// TODO: handle exception
 	  }
-	  driver.findElement(By.xpath("(//a[contains(text(),'参与活动')])[1]")).click();
-	  String biaoti=TitleQueue.pop(this.getClass().getName());
-      Uti.ChangeWindows(driver, 2);
-	  //Assert.assertEquals(isTextPresent(biaoti), true); //验证标题
-	  Uti.UploadFile(driver, filePath, "SWFUpload_0");
+		String title=TitleQueue.pop(this.getClass().getName());
+
+		if(null==title){
+			driver.findElement(By.xpath("(//a[contains(text(),'参与活动')])[1]")).click();
+		}else {
+			driver.findElement(By.linkText(title)).click();   
+		}
+
+	  Uti.ChangeWindows(driver, 2);
 	  Thread.sleep(1000);
+      //参与步骤一：资源下载		
+      driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[1]")).sendKeys("xuexixuexi");
+	  driver.findElement(By.cssSelector("#buzhou_div1 > div > form > input.btnbbs")).click();
+	  driver.findElement(By.cssSelector("a.downbtn.r")).click();
+	  Uti.ChangeWindows(driver, 2);
 	  try {
 	    	driver.findElement(By.id("msg_close")).click();
 
@@ -41,18 +50,17 @@ public class JoinActivity implements TestInfo{
 			System.out.println("没有弹出框");
 			// TODO: handle exception
 	  }
+	  //参与步骤二：指定提交人
 	  driver.findElement(By.cssSelector("#jiadd2 > em")).click();
-	  //driver.findElement(By.xpath("(//em[contains(text(),'2')])")).click();
-	  driver.findElement(By.xpath("//*[contains(@id, 'pl_con_msg')]")).sendKeys("xuexixuexi");//没有写[]，默认查找第一个id包含pl_con_msg的元素，这种动态id不太好定位，通过这种定位还是比较好的，不会随着项目变化而变化。
-	  driver.findElement(By.cssSelector("#buzhou_div2 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
-	  driver.findElement(By.cssSelector("#buzhou_div2 > div > div > a")).click();
+	  Uti.UploadFile(driver, filePath, "SWFUpload_0");
 	  Thread.sleep(1000);
+	  //参与步骤三：讨论
 	  driver.findElement(By.cssSelector("#jiadd3 > em")).click();
 	  driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[2]")).sendKeys("xuexixuexi22");
 	  driver.findElement(By.cssSelector("#buzhou_div3 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
 	  driver.findElement(By.cssSelector("#jiadd4 > em")).click();
 	  driver.findElement(By.xpath("(//a[contains(@class, 'downbtn')])[2]")).click();
-	  driver.quit();//参与完毕，关闭浏览器
+      driver.quit();//参与完毕，关闭浏览器
   }
   
   public  boolean isTextPresent(String what) {
