@@ -27,7 +27,8 @@ public class Uti {
 	    driver.findElement(By.id("password")).clear();
 	    driver.findElement(By.id("password")).sendKeys(password);
 	    driver.findElement(By.cssSelector("h3.login_kxdl")).click();
-	    driver.findElement(By.xpath("(//a[contains(text(),'去学习')])[2]")).click();//点击第一个项目的去学习，xpath可以查找以某字符串开头的、结尾的或者是包含的元素
+	    String pro_title = "//h1[@class='Wrap' and contains(text(),'测试项目')]/following-sibling::a";
+	    driver.findElement(By.xpath(pro_title)).click();//点击第一个项目的去学习，xpath可以查找以某字符串开头的、结尾的或者是包含的元素
     	
 	    java.util.Set<String> handles = driver.getWindowHandles();//获取所有窗口句柄  
 	    List<String> it = new ArrayList<String>(handles);
