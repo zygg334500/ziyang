@@ -1,5 +1,6 @@
 package Resources;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,7 +23,9 @@ public class UploadSource {
 	public void uploadSource(String username,String password,String path,String vedioPath) throws Exception{
 		
 		Uti.ChromeBrowser_setup(driver,username,password);
-		driver.findElementByPartialLinkText("资源").click();
+		
+		String s1 = "//a[contains(text(),'资源')][contains(@href,'resourceListNew')]";
+		driver.findElement(By.xpath(s1)).click();
 		
 		driver.findElementByLinkText("上传").click();
 		

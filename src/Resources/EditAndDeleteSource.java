@@ -20,7 +20,9 @@ public class EditAndDeleteSource {
 	public void uploadSource(String username,String password) throws Exception{
 		
 		Uti.ChromeBrowser_setup(driver,username,password);
-		driver.findElementByPartialLinkText("资源").click();
+		String s1 = "//a[contains(text(),'资源')][contains(@href,'resourceListNew')]";
+		driver.findElement(By.xpath(s1)).click();
+		
 		Thread.sleep(1000);
 		
 		driver.findElementByPartialLinkText("我上传的").click();
