@@ -25,7 +25,7 @@ public class doc_comments implements TestInfo{
 	  driver.findElement(By.partialLinkText("文章")).click();
 	  driver.findElement(By.id("tab4")).click();
 	  Thread.sleep(1000);
-	  driver.findElement(By.linkText("测试")).click();
+	  driver.findElement(By.linkText("文章标题")).click();
 	  Thread.sleep(2000);
 
 	    Uti.ChangeWindows(driver, 2);
