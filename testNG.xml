@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="NormaTestPlan" parallel="tests" thread-count="6">
+<suite name="NormaTestPlan" parallel="tests" thread-count="3">
     
     <test name="活动流程测试">
         <classes>
             <class name="Activity.Publish_ActivitywithallStep" />
             <class name="Activity.To_joinActivity" />    
             <class name="Activity.Advice_to_activity" />
+        </classes>
+        </test>
+        
+        <test name="活动投票和评价">
+        <classes>
+            <class name="ActivityAddedVoteAndEvaluate.VoteAndEvaluate" />
         </classes>
         </test>
         
@@ -60,6 +66,20 @@
      <test name="课程学习测试">
         <classes>
             <class name="course_learning.Learning" />
+        </classes>
+     </test>
+    
+    <test name="资源测试">
+        <classes>
+            <class name="Resources.UploadSource" />
+            <class name="Resources.EditAndDeleteSource" />
+        </classes>
+    </test>
+    
+    <test name="视频测试">
+        <classes>
+            <class name="Vedio.UploadVedio" />
+            <class name="Vedio.EditAndDeleteThePublishedVedio" />
         </classes>
     </test>
     

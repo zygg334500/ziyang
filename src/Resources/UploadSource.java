@@ -29,64 +29,7 @@ public class UploadSource {
 		
 		driver.findElementByLinkText("上传").click();
 		
-		//学段、学科
-
-		try{
-			new Select(driver.findElementById("sel_sysDictId1")).selectByValue("8875");  //高中
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId2")).selectByValue("8975");  //语文
-
-			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护学段、学科");
-		}
-		
-		//教材版本
-
-		try{
-			new Select(driver.findElementById("sel_sysDictId3")).selectByValue("102469"); //人教版
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId4")).selectByValue("102471");  //必修1
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId5")).selectByValue("102473");  //第一单元
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId6")).selectByValue("102477");  //诗两首
-
-			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护教材版本");
-		}
-		
-		//知识点
-
-		try{
-			new Select(driver.findElementById("sel_sysDictId8")).selectByValue("125657");  //六、作文
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId9")).selectByValue("125659");  //1、命题作文
-
-			Thread.sleep(500);
-		}catch (Exception e){
-			System.out.println("无需维护知识点");
-		}
-		
-		//资源
-
-		try{
-			new Select(driver.findElementById("sel_sysDictId11")).selectByValue("129099");  //学科教学资源
-
-			Thread.sleep(500);
-			new Select(driver.findElementById("sel_sysDictId7")).selectByValue("124059");   //导学案
-
-			Thread.sleep(500);
-		}catch(Exception e){
-			System.out.println("无需维护资源");
-		}
-		
+        Uti.resource(driver);
 		//上传附件
 
 		driver.findElementById("SWFUpload_0").click();

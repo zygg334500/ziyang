@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="NormaTestPlan" parallel="tests" thread-count="1">
+<suite name="NormaTestPlan" parallel="tests" thread-count="3">
     
     <test name="活动流程测试">
         <classes>
             <class name="Activity.Publish_ActivitywithallStep" />
             <class name="Activity.To_joinActivity" />    
             <class name="Activity.Advice_to_activity" />
+        </classes>
+        </test>
+        
+        <test name="活动投票和评价">
+        <classes>
+            <class name="ActivityAddedVoteAndEvaluate.VoteAndEvaluate" />
         </classes>
         </test>
         
