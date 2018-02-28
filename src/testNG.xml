@@ -83,6 +83,21 @@
         </classes>
     </test>
     
+    <test name="公告测试">
+        <classes>
+            <class name="gonggao.Fabugonggao"/>
+            <class name="gonggao.Gejigonggao"/>
+            <class name="gonggao.Qanbugonggao"/>
+        </classes>
+    </test>
+    
+    <test name="工作室首页测试">
+        <classes>
+           <class name="HomePage.EveryRole_HomePage"/>
+           <class name="HomePage.Student_HomePage"/>
+        </classes>
+    </test>
+        
   <test name="删除测试">
     <classes>
       <class name="DeleteTesting.BeikeDeleteTest"/>
