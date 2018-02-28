@@ -62,7 +62,7 @@ public class  To_joinActivity implements TestInfo{
 		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[3]")).sendKeys("xuexixuexi");
 		driver.findElement(By.cssSelector("#buzhou_div3 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
 		driver.findElement(By.cssSelector("a.downbtn.r")).click();
-		Uti.ChangeWindows(driver, 2);
+//		Uti.ChangeWindows(driver, 2);
 		//参加步骤四：附件上传
 		driver.findElement(By.cssSelector("#jiadd4 > em")).click();//第四步，附件上传
 		Thread.sleep(3000);
@@ -95,7 +95,8 @@ public class  To_joinActivity implements TestInfo{
 		driver.findElement(By.xpath("(//*[contains(@id, 'pl_con_msg')])[5]")).sendKeys("xuexixuexi");
 		driver.findElement(By.cssSelector("#buzhou_div7 > div.bbslist.linexu > form.taolunfrom > input.btnbbs")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.partialLinkText(clist)).click();        
+		String xpath1 = "//div[@class='updiv']/a";
+		driver.findElement(By.xpath(xpath1)).click();        
 		Thread.sleep(2000);   
 		Uti.ChangeWindows(driver,3);
 		driver.close();//关闭新打开的查看视频窗口
