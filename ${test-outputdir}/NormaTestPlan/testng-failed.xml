@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [NormaTestPlan]" parallel="tests">
+  <test name="作业流程测试(failed)" parallel="tests">
+    <classes>
+      <class name="task.Making">
+        <methods>
+          <include name="making"/>
+        </methods>
+      </class> <!-- task.Making -->
+    </classes>
+  </test> <!-- 作业流程测试(failed) -->
+  <test name="同伴协作流程测试(failed)" parallel="tests">
+    <classes>
+      <class name="Tongbanxiezuo.Publish_cooperation">
+        <methods>
+          <include name="publish_cooperation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Tongbanxiezuo.Publish_cooperation -->
+      <class name="Tongbanxiezuo.Join_cooperation">
+        <methods>
+          <include name="join_cooperation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Tongbanxiezuo.Join_cooperation -->
+    </classes>
+  </test> <!-- 同伴协作流程测试(failed) -->
+  <test name="新活动测试(failed)" parallel="tests">
+    <classes>
+      <class name="NewActivity.JoinActivity">
+        <methods>
+          <include name="studuentakePartActivity" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- NewActivity.JoinActivity -->
+      <class name="NewActivity.MakingHuodong">
+        <methods>
+          <include name="checkHuodongOfStudents" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- NewActivity.MakingHuodong -->
+    </classes>
+  </test> <!-- 新活动测试(failed) -->
+  <test name="资源测试(failed)" parallel="tests">
+    <classes>
+      <class name="Resources.EditAndDeleteSource">
+        <methods>
+          <include name="uploadSource" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Resources.EditAndDeleteSource -->
+      <class name="Resources.UploadSource">
+        <methods>
+          <include name="uploadSource" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Resources.UploadSource -->
+    </classes>
+  </test> <!-- 资源测试(failed) -->
+  <test name="删除测试(failed)" parallel="tests">
+    <classes>
+      <class name="DeleteTesting.ZuoyeDeleteTest">
+        <methods>
+          <include name="zuoye_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.ZuoyeDeleteTest -->
+      <class name="DeleteTesting.KeguantiDeleteTest">
+        <methods>
+          <include name="keguantiDeleteTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.KeguantiDeleteTest -->
+      <class name="DeleteTesting.WenzhangDeleteTest">
+        <methods>
+          <include name="wenzhang_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.WenzhangDeleteTest -->
+      <class name="DeleteTesting.HuodongDeleteTest">
+        <methods>
+          <include name="huodong_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.HuodongDeleteTest -->
+      <class name="DeleteTesting.JiaoLiuDeleteTest">
+        <methods>
+          <include name="jiaoliu_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.JiaoLiuDeleteTest -->
+      <class name="DeleteTesting.TongbanxiezuoDeleteTest">
+        <methods>
+          <include name="xiezuo_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.TongbanxiezuoDeleteTest -->
+      <class name="DeleteTesting.MokeDeleteTest">
+        <methods>
+          <include name="moke_delete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- DeleteTesting.MokeDeleteTest -->
+    </classes>
+  </test> <!-- 删除测试(failed) -->
+</suite> <!-- Failed suite [NormaTestPlan] -->

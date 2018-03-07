@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false" allow-return-values="true">
+  <test name="Resources">
+    <classes>
+         <class name="Resources.UploadSource"/>
+      <class name="Resources.EditAndDeleteSource"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

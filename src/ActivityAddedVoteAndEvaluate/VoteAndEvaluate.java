@@ -116,7 +116,7 @@ public class VoteAndEvaluate {
 		driver.findElementByLinkText("退出").click();
 
 		joinActivity(driver,"devstudent3","123123");
-		scoreActivity(driver,"devteacher","3edc$RFV");
+		scoreActivity(driver,"devteacher","123123");
 
 		driver.quit();
 		

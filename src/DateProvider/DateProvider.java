@@ -14,7 +14,7 @@ public class DateProvider {
 	public static String zhuanjiaUsername="devzhuanjia";
 	public static String zhuanjiaPassword="3edc$RFV";
 	public static String teacherUsername="devteacher";
-	public static String teacherPassword="3edc$RFV";
+	public static String teacherPassword="123123";
 	public static String student1Username="devstudent1";
 	public static String student1Password="123123";
 	public static String student2Username="devstudent2";

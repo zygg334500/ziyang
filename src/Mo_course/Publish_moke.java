@@ -14,7 +14,7 @@ public class Publish_moke implements TestInfo{
 	@Test(groups = {"Mo_course"})
   public void publish_moke() throws Exception {
 
-		Uti.ChromeBrowser_setup(driver, "devteacher", "3edc$RFV");
+		Uti.ChromeBrowser_setup(driver, "devteacher", "123123");
 		
 		driver.findElement(By.partialLinkText("磨课")).click();
 		driver.findElement(By.linkText("发布")).click();	

@@ -27,6 +27,7 @@ public class MakingHuodong implements TestInfo{
 	    Thread.sleep(1000);
 	    driver.findElement(By.linkText("查看并批阅")).click();
 	    Uti.ChangeWindows(driver, 2);
+	    Thread.sleep(1000);
 	    driver.findElement(By.id("RadioGroup1_0")).click();
 	    driver.findElement(By.id("TextArea2")).sendKeys("干得漂亮，老师相信你");
 	    driver.findElement(By.name("isRecommend")).click();
